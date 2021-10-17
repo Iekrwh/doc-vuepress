@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>ElasticSearch | Chiriri</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    <link rel="icon" href="/doc-vuepress/favicon.ico">
+    <meta name="description" content="Chiriridesu">
+    
+    <link rel="preload" href="/doc-vuepress/assets/css/0.styles.f3cbd881.css" as="style"><link rel="preload" href="/doc-vuepress/assets/js/app.4b1e1c20.js" as="script"><link rel="preload" href="/doc-vuepress/assets/js/2.3b3db5cf.js" as="script"><link rel="preload" href="/doc-vuepress/assets/js/25.38397550.js" as="script"><link rel="prefetch" href="/doc-vuepress/assets/js/10.d4dc1d50.js"><link rel="prefetch" href="/doc-vuepress/assets/js/100.94faa1c8.js"><link rel="prefetch" href="/doc-vuepress/assets/js/101.dc7e5f72.js"><link rel="prefetch" href="/doc-vuepress/assets/js/102.98782e5d.js"><link rel="prefetch" href="/doc-vuepress/assets/js/103.a0f22f25.js"><link rel="prefetch" href="/doc-vuepress/assets/js/104.52e7d6af.js"><link rel="prefetch" href="/doc-vuepress/assets/js/105.07c7bd60.js"><link rel="prefetch" href="/doc-vuepress/assets/js/106.3e6016d3.js"><link rel="prefetch" href="/doc-vuepress/assets/js/107.905b503a.js"><link rel="prefetch" href="/doc-vuepress/assets/js/108.14e6ba94.js"><link rel="prefetch" href="/doc-vuepress/assets/js/109.fddd957a.js"><link rel="prefetch" href="/doc-vuepress/assets/js/11.a26d4d67.js"><link rel="prefetch" href="/doc-vuepress/assets/js/110.f9db63dd.js"><link rel="prefetch" href="/doc-vuepress/assets/js/111.247bfb54.js"><link rel="prefetch" href="/doc-vuepress/assets/js/112.872ddce1.js"><link rel="prefetch" href="/doc-vuepress/assets/js/113.994ba707.js"><link rel="prefetch" href="/doc-vuepress/assets/js/114.034a5442.js"><link rel="prefetch" href="/doc-vuepress/assets/js/115.93abfac6.js"><link rel="prefetch" href="/doc-vuepress/assets/js/116.2dc9b280.js"><link rel="prefetch" href="/doc-vuepress/assets/js/117.91e2191f.js"><link rel="prefetch" href="/doc-vuepress/assets/js/118.5cecfa8d.js"><link rel="prefetch" href="/doc-vuepress/assets/js/119.4c476f0d.js"><link rel="prefetch" href="/doc-vuepress/assets/js/12.63f08065.js"><link rel="prefetch" href="/doc-vuepress/assets/js/120.eeed4134.js"><link rel="prefetch" href="/doc-vuepress/assets/js/121.d17de00f.js"><link rel="prefetch" href="/doc-vuepress/assets/js/122.8a4c6502.js"><link rel="prefetch" href="/doc-vuepress/assets/js/123.4766b98c.js"><link rel="prefetch" href="/doc-vuepress/assets/js/124.c33294e3.js"><link rel="prefetch" href="/doc-vuepress/assets/js/125.aefc8138.js"><link rel="prefetch" href="/doc-vuepress/assets/js/126.3d50f049.js"><link rel="prefetch" href="/doc-vuepress/assets/js/127.b2febbc7.js"><link rel="prefetch" href="/doc-vuepress/assets/js/128.86c8b520.js"><link rel="prefetch" href="/doc-vuepress/assets/js/129.c5f28362.js"><link rel="prefetch" href="/doc-vuepress/assets/js/13.61dbc7c1.js"><link rel="prefetch" href="/doc-vuepress/assets/js/130.6d28f6b1.js"><link rel="prefetch" href="/doc-vuepress/assets/js/131.3975334a.js"><link rel="prefetch" href="/doc-vuepress/assets/js/132.01b9de50.js"><link rel="prefetch" href="/doc-vuepress/assets/js/133.4a4cad56.js"><link rel="prefetch" href="/doc-vuepress/assets/js/134.9c5e1566.js"><link rel="prefetch" href="/doc-vuepress/assets/js/135.8ecef02c.js"><link rel="prefetch" href="/doc-vuepress/assets/js/136.42ba8230.js"><link rel="prefetch" href="/doc-vuepress/assets/js/137.cf7476aa.js"><link rel="prefetch" href="/doc-vuepress/assets/js/138.a4d4f0ac.js"><link rel="prefetch" href="/doc-vuepress/assets/js/139.d9cb25db.js"><link rel="prefetch" href="/doc-vuepress/assets/js/14.edde98c2.js"><link rel="prefetch" href="/doc-vuepress/assets/js/140.d6a77d20.js"><link rel="prefetch" href="/doc-vuepress/assets/js/141.023282a7.js"><link rel="prefetch" href="/doc-vuepress/assets/js/142.40cb5823.js"><link rel="prefetch" href="/doc-vuepress/assets/js/143.5e14d200.js"><link rel="prefetch" href="/doc-vuepress/assets/js/144.01eb7d01.js"><link rel="prefetch" href="/doc-vuepress/assets/js/145.ed9617fd.js"><link rel="prefetch" href="/doc-vuepress/assets/js/146.9a4484b4.js"><link rel="prefetch" href="/doc-vuepress/assets/js/147.5963ae78.js"><link rel="prefetch" href="/doc-vuepress/assets/js/148.3aa1c867.js"><link rel="prefetch" href="/doc-vuepress/assets/js/149.6c972116.js"><link rel="prefetch" href="/doc-vuepress/assets/js/15.a98887f4.js"><link rel="prefetch" href="/doc-vuepress/assets/js/150.522ce322.js"><link rel="prefetch" href="/doc-vuepress/assets/js/151.c6ab8b3b.js"><link rel="prefetch" href="/doc-vuepress/assets/js/152.a520c4c2.js"><link rel="prefetch" href="/doc-vuepress/assets/js/153.6009d14c.js"><link rel="prefetch" href="/doc-vuepress/assets/js/154.543c4b5e.js"><link rel="prefetch" href="/doc-vuepress/assets/js/155.7e3d1c37.js"><link rel="prefetch" href="/doc-vuepress/assets/js/156.73600d49.js"><link rel="prefetch" href="/doc-vuepress/assets/js/157.d3f30411.js"><link rel="prefetch" href="/doc-vuepress/assets/js/158.32fc63aa.js"><link rel="prefetch" href="/doc-vuepress/assets/js/159.1ba5944d.js"><link rel="prefetch" href="/doc-vuepress/assets/js/16.821d30cd.js"><link rel="prefetch" href="/doc-vuepress/assets/js/160.5ac1ade7.js"><link rel="prefetch" href="/doc-vuepress/assets/js/161.a4a09adf.js"><link rel="prefetch" href="/doc-vuepress/assets/js/162.89571c04.js"><link rel="prefetch" href="/doc-vuepress/assets/js/163.ea4eb7f1.js"><link rel="prefetch" href="/doc-vuepress/assets/js/164.bcc74c91.js"><link rel="prefetch" href="/doc-vuepress/assets/js/165.02c1ab54.js"><link rel="prefetch" href="/doc-vuepress/assets/js/166.83baa17a.js"><link rel="prefetch" href="/doc-vuepress/assets/js/167.c998904b.js"><link rel="prefetch" href="/doc-vuepress/assets/js/168.2802cf51.js"><link rel="prefetch" href="/doc-vuepress/assets/js/169.8681f4c0.js"><link rel="prefetch" href="/doc-vuepress/assets/js/17.4e09bd10.js"><link rel="prefetch" href="/doc-vuepress/assets/js/170.390411d2.js"><link rel="prefetch" href="/doc-vuepress/assets/js/171.18b54d98.js"><link rel="prefetch" href="/doc-vuepress/assets/js/172.ffee59d0.js"><link rel="prefetch" href="/doc-vuepress/assets/js/173.264feb5a.js"><link rel="prefetch" href="/doc-vuepress/assets/js/174.ff6d7931.js"><link rel="prefetch" href="/doc-vuepress/assets/js/175.a11e5757.js"><link rel="prefetch" href="/doc-vuepress/assets/js/176.3a00bece.js"><link rel="prefetch" href="/doc-vuepress/assets/js/177.b6138d52.js"><link rel="prefetch" href="/doc-vuepress/assets/js/178.bf237bc4.js"><link rel="prefetch" href="/doc-vuepress/assets/js/179.023b616b.js"><link rel="prefetch" href="/doc-vuepress/assets/js/18.5671ef91.js"><link rel="prefetch" href="/doc-vuepress/assets/js/180.e1ea50d7.js"><link rel="prefetch" href="/doc-vuepress/assets/js/181.3646d30a.js"><link rel="prefetch" href="/doc-vuepress/assets/js/19.dac6d7ec.js"><link rel="prefetch" href="/doc-vuepress/assets/js/20.52432beb.js"><link rel="prefetch" href="/doc-vuepress/assets/js/21.470423dd.js"><link rel="prefetch" href="/doc-vuepress/assets/js/22.08a38cae.js"><link rel="prefetch" href="/doc-vuepress/assets/js/23.e4fd563f.js"><link rel="prefetch" href="/doc-vuepress/assets/js/24.2baf2272.js"><link rel="prefetch" href="/doc-vuepress/assets/js/26.0455dbe9.js"><link rel="prefetch" href="/doc-vuepress/assets/js/27.25316598.js"><link rel="prefetch" href="/doc-vuepress/assets/js/28.3012b061.js"><link rel="prefetch" href="/doc-vuepress/assets/js/29.5076b975.js"><link rel="prefetch" href="/doc-vuepress/assets/js/3.d29aa6a2.js"><link rel="prefetch" href="/doc-vuepress/assets/js/30.711dfb5e.js"><link rel="prefetch" href="/doc-vuepress/assets/js/31.39a3f400.js"><link rel="prefetch" href="/doc-vuepress/assets/js/32.ec38b52e.js"><link rel="prefetch" href="/doc-vuepress/assets/js/33.4ca87af7.js"><link rel="prefetch" href="/doc-vuepress/assets/js/34.88537518.js"><link rel="prefetch" href="/doc-vuepress/assets/js/35.b7530e97.js"><link rel="prefetch" href="/doc-vuepress/assets/js/36.1fc1a969.js"><link rel="prefetch" href="/doc-vuepress/assets/js/37.aecac559.js"><link rel="prefetch" href="/doc-vuepress/assets/js/38.23b0e3b4.js"><link rel="prefetch" href="/doc-vuepress/assets/js/39.efa88a78.js"><link rel="prefetch" href="/doc-vuepress/assets/js/4.ab196059.js"><link rel="prefetch" href="/doc-vuepress/assets/js/40.97569ceb.js"><link rel="prefetch" href="/doc-vuepress/assets/js/41.d468826b.js"><link rel="prefetch" href="/doc-vuepress/assets/js/42.9448f0d6.js"><link rel="prefetch" href="/doc-vuepress/assets/js/43.d8fec7bc.js"><link rel="prefetch" href="/doc-vuepress/assets/js/44.70c84275.js"><link rel="prefetch" href="/doc-vuepress/assets/js/45.9b4da6f8.js"><link rel="prefetch" href="/doc-vuepress/assets/js/46.e3bbde69.js"><link rel="prefetch" href="/doc-vuepress/assets/js/47.123f046a.js"><link rel="prefetch" href="/doc-vuepress/assets/js/48.b3a0adf4.js"><link rel="prefetch" href="/doc-vuepress/assets/js/49.76dab24d.js"><link rel="prefetch" href="/doc-vuepress/assets/js/5.61dedc87.js"><link rel="prefetch" href="/doc-vuepress/assets/js/50.4a537d99.js"><link rel="prefetch" href="/doc-vuepress/assets/js/51.cf740075.js"><link rel="prefetch" href="/doc-vuepress/assets/js/52.3c589f69.js"><link rel="prefetch" href="/doc-vuepress/assets/js/53.36f45ef9.js"><link rel="prefetch" href="/doc-vuepress/assets/js/54.17fa4963.js"><link rel="prefetch" href="/doc-vuepress/assets/js/55.f59ee796.js"><link rel="prefetch" href="/doc-vuepress/assets/js/56.8f9c0489.js"><link rel="prefetch" href="/doc-vuepress/assets/js/57.c2f6f60a.js"><link rel="prefetch" href="/doc-vuepress/assets/js/58.e2aa8539.js"><link rel="prefetch" href="/doc-vuepress/assets/js/59.8034e684.js"><link rel="prefetch" href="/doc-vuepress/assets/js/6.7862f44a.js"><link rel="prefetch" href="/doc-vuepress/assets/js/60.ff10d0cb.js"><link rel="prefetch" href="/doc-vuepress/assets/js/61.5b79e654.js"><link rel="prefetch" href="/doc-vuepress/assets/js/62.4e17d485.js"><link rel="prefetch" href="/doc-vuepress/assets/js/63.a441cd9f.js"><link rel="prefetch" href="/doc-vuepress/assets/js/64.f6d3aabc.js"><link rel="prefetch" href="/doc-vuepress/assets/js/65.5ecf814e.js"><link rel="prefetch" href="/doc-vuepress/assets/js/66.570d6322.js"><link rel="prefetch" href="/doc-vuepress/assets/js/67.dea71b2b.js"><link rel="prefetch" href="/doc-vuepress/assets/js/68.41da6586.js"><link rel="prefetch" href="/doc-vuepress/assets/js/69.0fa89aa6.js"><link rel="prefetch" href="/doc-vuepress/assets/js/7.de18e2b1.js"><link rel="prefetch" href="/doc-vuepress/assets/js/70.2c1a3b0a.js"><link rel="prefetch" href="/doc-vuepress/assets/js/71.4789cc8e.js"><link rel="prefetch" href="/doc-vuepress/assets/js/72.ad3204df.js"><link rel="prefetch" href="/doc-vuepress/assets/js/73.aa9804cb.js"><link rel="prefetch" href="/doc-vuepress/assets/js/74.fcad13df.js"><link rel="prefetch" href="/doc-vuepress/assets/js/75.f32c3283.js"><link rel="prefetch" href="/doc-vuepress/assets/js/76.48acd19c.js"><link rel="prefetch" href="/doc-vuepress/assets/js/77.96230c07.js"><link rel="prefetch" href="/doc-vuepress/assets/js/78.f26c4e8c.js"><link rel="prefetch" href="/doc-vuepress/assets/js/79.80c8b763.js"><link rel="prefetch" href="/doc-vuepress/assets/js/8.6471eaab.js"><link rel="prefetch" href="/doc-vuepress/assets/js/80.32bef352.js"><link rel="prefetch" href="/doc-vuepress/assets/js/81.1242c1d7.js"><link rel="prefetch" href="/doc-vuepress/assets/js/82.dd231e3b.js"><link rel="prefetch" href="/doc-vuepress/assets/js/83.fb3a30d0.js"><link rel="prefetch" href="/doc-vuepress/assets/js/84.671db0f2.js"><link rel="prefetch" href="/doc-vuepress/assets/js/85.09a0a3a3.js"><link rel="prefetch" href="/doc-vuepress/assets/js/86.fd88386a.js"><link rel="prefetch" href="/doc-vuepress/assets/js/87.ce4c424a.js"><link rel="prefetch" href="/doc-vuepress/assets/js/88.665a758a.js"><link rel="prefetch" href="/doc-vuepress/assets/js/89.7afcf2cf.js"><link rel="prefetch" href="/doc-vuepress/assets/js/9.6d4ccd16.js"><link rel="prefetch" href="/doc-vuepress/assets/js/90.d86768a3.js"><link rel="prefetch" href="/doc-vuepress/assets/js/91.605d79c2.js"><link rel="prefetch" href="/doc-vuepress/assets/js/92.edc85a5f.js"><link rel="prefetch" href="/doc-vuepress/assets/js/93.822e55a7.js"><link rel="prefetch" href="/doc-vuepress/assets/js/94.37c898af.js"><link rel="prefetch" href="/doc-vuepress/assets/js/95.e299daca.js"><link rel="prefetch" href="/doc-vuepress/assets/js/96.6321cb85.js"><link rel="prefetch" href="/doc-vuepress/assets/js/97.1025028c.js"><link rel="prefetch" href="/doc-vuepress/assets/js/98.7c97c6bf.js"><link rel="prefetch" href="/doc-vuepress/assets/js/99.df908bb4.js">
+    <link rel="stylesheet" href="/doc-vuepress/assets/css/0.styles.f3cbd881.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/doc-vuepress/" class="home-link router-link-active"><!----> <span class="site-name">Chiriri</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/doc-vuepress/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="后端" class="dropdown-title"><span class="title">后端</span> <span class="arrow down"></span></button> <button type="button" aria-label="后端" class="mobile-dropdown-title"><span class="title">后端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/doc-vuepress/JavaSE/" class="nav-link">
+  JavaSE
+</a></li><li class="dropdown-item"><!----> <a href="/doc-vuepress/JavaEE/" class="nav-link router-link-active">
+  JavaEE
+</a></li><li class="dropdown-item"><!----> <a href="/doc-vuepress/Linux/" class="nav-link">
+  Linux
+</a></li><li class="dropdown-item"><!----> <a href="/doc-vuepress/SQL/" class="nav-link">
+  SQL
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="大数据" class="dropdown-title"><span class="title">大数据</span> <span class="arrow down"></span></button> <button type="button" aria-label="大数据" class="mobile-dropdown-title"><span class="title">大数据</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/doc-vuepress/Hadoop/" class="nav-link">
+  Hadoop
+</a></li><li class="dropdown-item"><!----> <a href="/doc-vuepress/Hive/" class="nav-link">
+  Hive
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><span class="title">前端</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端" class="mobile-dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/doc-vuepress/前端/" class="nav-link">
+  前端
+</a></li><li class="dropdown-item"><!----> <a href="/doc-vuepress/Vue/" class="nav-link">
+  Vue
+</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/doc-vuepress/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="后端" class="dropdown-title"><span class="title">后端</span> <span class="arrow down"></span></button> <button type="button" aria-label="后端" class="mobile-dropdown-title"><span class="title">后端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/doc-vuepress/JavaSE/" class="nav-link">
+  JavaSE
+</a></li><li class="dropdown-item"><!----> <a href="/doc-vuepress/JavaEE/" class="nav-link router-link-active">
+  JavaEE
+</a></li><li class="dropdown-item"><!----> <a href="/doc-vuepress/Linux/" class="nav-link">
+  Linux
+</a></li><li class="dropdown-item"><!----> <a href="/doc-vuepress/SQL/" class="nav-link">
+  SQL
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="大数据" class="dropdown-title"><span class="title">大数据</span> <span class="arrow down"></span></button> <button type="button" aria-label="大数据" class="mobile-dropdown-title"><span class="title">大数据</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/doc-vuepress/Hadoop/" class="nav-link">
+  Hadoop
+</a></li><li class="dropdown-item"><!----> <a href="/doc-vuepress/Hive/" class="nav-link">
+  Hive
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><span class="title">前端</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端" class="mobile-dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/doc-vuepress/前端/" class="nav-link">
+  前端
+</a></li><li class="dropdown-item"><!----> <a href="/doc-vuepress/Vue/" class="nav-link">
+  Vue
+</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/doc-vuepress/JavaEE/JDBC.html" class="sidebar-link">JDBC</a></li><li><a href="/doc-vuepress/JavaEE/MyBatis.html" class="sidebar-link">MyBatis</a></li><li><a href="/doc-vuepress/JavaEE/Jackson.html" class="sidebar-link">Jackson</a></li><li><a href="/doc-vuepress/JavaEE/Jedis.html" class="sidebar-link">Jedis</a></li><li><a href="/doc-vuepress/JavaEE/Maven.html" class="sidebar-link">Maven</a></li><li><a href="/doc-vuepress/JavaEE/POI.html" class="sidebar-link">POI</a></li><li><a href="/doc-vuepress/JavaEE/Spring.html" class="sidebar-link">Spring</a></li><li><a href="/doc-vuepress/JavaEE/SpringMVC.html" class="sidebar-link">Spring MVC</a></li><li><a href="/doc-vuepress/JavaEE/Maven高级.html" class="sidebar-link">Maven 高级</a></li><li><a href="/doc-vuepress/JavaEE/Dubbo.html" class="sidebar-link">Dubbo</a></li><li><a href="/doc-vuepress/JavaEE/Zookeeper.html" class="sidebar-link">Zookeeper</a></li><li><a href="/doc-vuepress/JavaEE/SpringSecurity.html" class="sidebar-link">Spring Security</a></li><li><a href="/doc-vuepress/JavaEE/SpringBoot.html" class="sidebar-link">Spring Boot</a></li><li><a href="/doc-vuepress/JavaEE/SpringBoot高级.html" class="sidebar-link">Spring Boot 高级</a></li><li><a href="/doc-vuepress/JavaEE/RabbitMQ.html" class="sidebar-link">RabbitMQ</a></li><li><a href="/doc-vuepress/JavaEE/RabbitMQ 高级.html" class="sidebar-link">RabbitMQ 高级</a></li><li><a href="/doc-vuepress/JavaEE/Spring Cloud.html" class="sidebar-link">Spring Cloud</a></li><li><a href="/doc-vuepress/JavaEE/Docker.html" class="sidebar-link">Docker</a></li><li><a href="/doc-vuepress/JavaEE/ElasticSearch.html" aria-current="page" class="active sidebar-link">ElasticSearch</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/doc-vuepress/JavaEE/ElasticSearch.html#倒排索引" class="sidebar-link">倒排索引</a></li><li class="sidebar-sub-header"><a href="/doc-vuepress/JavaEE/ElasticSearch.html#elasticsearch搜索和传统数据库查询的区别" class="sidebar-link">ElasticSearch搜索和传统数据库查询的区别</a></li><li class="sidebar-sub-header"><a href="/doc-vuepress/JavaEE/ElasticSearch.html#安装elasticsearch" class="sidebar-link">安装ElasticSearch</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/doc-vuepress/JavaEE/ElasticSearch.html#安装辅助工具kibana" class="sidebar-link">安装辅助工具Kibana</a></li></ul></li><li class="sidebar-sub-header"><a href="/doc-vuepress/JavaEE/ElasticSearch.html#elasticsearch-核心概念" class="sidebar-link">ElasticSearch 核心概念</a></li><li class="sidebar-sub-header"><a href="/doc-vuepress/JavaEE/ElasticSearch.html#操作elasticsearch" class="sidebar-link">操作ElasticSearch</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/doc-vuepress/JavaEE/ElasticSearch.html#restful风格" class="sidebar-link">RESTful风格</a></li><li class="sidebar-sub-header"><a href="/doc-vuepress/JavaEE/ElasticSearch.html#操作索引" class="sidebar-link">操作索引</a></li><li class="sidebar-sub-header"><a href="/doc-vuepress/JavaEE/ElasticSearch.html#操作映射" class="sidebar-link">操作映射</a></li><li class="sidebar-sub-header"><a href="/doc-vuepress/JavaEE/ElasticSearch.html#操作文档" class="sidebar-link">操作文档</a></li></ul></li><li class="sidebar-sub-header"><a href="/doc-vuepress/JavaEE/ElasticSearch.html#分词器" class="sidebar-link">分词器</a></li><li class="sidebar-sub-header"><a href="/doc-vuepress/JavaEE/ElasticSearch.html#ik分词器" class="sidebar-link">IK分词器</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/doc-vuepress/JavaEE/ElasticSearch.html#安装" class="sidebar-link">安装</a></li><li class="sidebar-sub-header"><a href="/doc-vuepress/JavaEE/ElasticSearch.html#使用" class="sidebar-link">使用</a></li></ul></li><li class="sidebar-sub-header"><a href="/doc-vuepress/JavaEE/ElasticSearch.html#javaapi" class="sidebar-link">JavaApi</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/doc-vuepress/JavaEE/ElasticSearch.html#添加索引-2" class="sidebar-link">添加索引</a></li><li class="sidebar-sub-header"><a href="/doc-vuepress/JavaEE/ElasticSearch.html#添加-修改文档" class="sidebar-link">添加/修改文档</a></li><li class="sidebar-sub-header"><a href="/doc-vuepress/JavaEE/ElasticSearch.html#查询文档-2" class="sidebar-link">查询文档</a></li><li class="sidebar-sub-header"><a href="/doc-vuepress/JavaEE/ElasticSearch.html#删除文档" class="sidebar-link">删除文档</a></li></ul></li></ul></li><li><a href="/doc-vuepress/JavaEE/ElasticSearch 高级.html" class="sidebar-link">ElasticSearch 高级</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="elasticsearch"><a href="#elasticsearch" class="header-anchor">#</a> ElasticSearch</h1> <p>ElasticSearch是基于 Lucene的搜索服务器 是一个分布式 高扩展 高实时的搜索与数据分析引擎</p> <p>基于RESTful web接口</p> <p>ElasticSearch是用java开发 并作为apache的开源项目</p> <p>https://www.elastic.co/cn/</p> <p>一般用于 海量数据的查询 日志数据分析 实时数据分析</p> <h2 id="倒排索引"><a href="#倒排索引" class="header-anchor">#</a> 倒排索引</h2> <p>将各个文档中内容.进行分词 形成词条 记录词条和数据的唯一标识(id)的对应关系 形成的产物</p> <h2 id="elasticsearch搜索和传统数据库查询的区别"><a href="#elasticsearch搜索和传统数据库查询的区别" class="header-anchor">#</a> ElasticSearch搜索和传统数据库查询的区别</h2> <ol><li>传统关系型数据 使用模糊查询 左边有通配符 不会走索引 会全表扫描 性能低</li> <li>只能以一个关键字作为查询条件  而ElasticSearch会把一个关键字拆分为多个词 进行查询</li> <li>ElasticSearch 以关键字 生成的倒排索引 词条会排序 形成一颗树形结构 提升词条的查询速度</li> <li>Mysql有事务性 而ElasticSearch 没有事务性 所以删了的数据是无法恢复的</li> <li>ElasticSearch 没有物理外键这个特性 如果数据的一致性要求比较高 不建议使用</li> <li>ElasticSearch和Mysql 分工不同 Mysql负责存储数据 ElasticSearch负责搜索数据</li></ol> <h2 id="安装elasticsearch"><a href="#安装elasticsearch" class="header-anchor">#</a> 安装ElasticSearch</h2> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token function">tar</span> -zxvf elasticsearch-7.15.0-linux-x86_64.tar.gz -C /opt
+<span class="token comment">#编辑配置</span>
+<span class="token function">vim</span> /opt/elasticsearch-7.15.0/config/elasticsearch.yml
+
+<span class="token comment">#追加以下内容</span>
+cluster.name: my-application
+node.name: node-1
+network.host: <span class="token number">0.0</span>.0.0
+http.port: <span class="token number">9200</span>
+cluster.initial_master_nodes: <span class="token punctuation">[</span><span class="token string">&quot;node-1&quot;</span><span class="token punctuation">]</span>
+
+<span class="token comment">#出于安全问题ElasticSearch不允许root用户直接运行</span>
+<span class="token function">useradd</span> iekr
+<span class="token function">passwd</span> <span class="token number">123456</span>
+<span class="token comment">#授权</span>
+<span class="token function">chown</span> -R iekr:iekr /opt/elasticsearch-7.15.0/
+</code></pre></div><p>新建的用户最大创建文件和最大虚拟内存太小 需要修改配置文件</p> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token comment">#修改最大创建文件数</span>
+<span class="token function">vim</span> /etc/security/limits.conf
+
+<span class="token comment">#追加内容</span>
+iekr soft nofile <span class="token number">65536</span>
+iekr hard nofile <span class="token number">65536</span>
+
+<span class="token function">vim</span> /etc/security/limits.d/20-nproc.conf
+<span class="token comment">#追加内容</span>
+iekr soft nofile <span class="token number">65536</span>
+iekr hard nofile <span class="token number">65536</span>
+* hard nproc <span class="token number">4096</span>
+
+
+<span class="token comment">#修改虚拟内容大小</span>
+<span class="token function">vim</span> /etc/sysctl.conf 
+
+<span class="token comment">#追加内容</span>
+vm.max_map_count<span class="token operator">=</span><span class="token number">655360</span>
+<span class="token comment">#重载</span>
+sysctl -p
+
+firewall-cmd --zone<span class="token operator">=</span>public --add-port<span class="token operator">=</span><span class="token number">9200</span>/tcp --permanent
+</code></pre></div><p>启动</p> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token function">su</span> iekr
+<span class="token builtin class-name">cd</span> /opt/elasticsearch-7.15.0/bin/
+./elasticsearch -d  <span class="token comment">#-d后台运行</span>
+</code></pre></div><p>访问 http://192.168.130.124:9200/ 出现json字符串则启动成功</p> <h3 id="安装辅助工具kibana"><a href="#安装辅助工具kibana" class="header-anchor">#</a> 安装辅助工具Kibana</h3> <p>https://www.elastic.co/cn/kibana/</p> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token function">tar</span> -zxvf kibana-7.15.0-linux-x86_64.tar.gz -C /opt
+<span class="token comment">#配置</span>
+<span class="token function">vim</span> /opt/kibana-7.15.0-linux-x86_64/config/kibana.yml
+
+<span class="token comment">#追加内容</span>
+server.port: <span class="token number">5601</span>
+server.host: <span class="token string">&quot;0.0.0.0&quot;</span>
+server.name: <span class="token string">&quot;your-hostname&quot;</span>  <span class="token comment">#自定义名称</span>
+elasticsearch.hosts: <span class="token punctuation">[</span><span class="token string">&quot;http://localhost:9200&quot;</span><span class="token punctuation">]</span>
+elasticsearch.requestTimeout: <span class="token number">30000</span>  <span class="token comment">#连接ES超时时间</span>
+i18n.locale: <span class="token string">&quot;zh-CN&quot;</span>  <span class="token comment">#设置为中文</span>
+
+<span class="token comment">#授权</span>
+<span class="token function">chown</span> -R iekr:iekr /opt/kibana-7.15.0-linux-x86_64/
+firewall-cmd --zone<span class="token operator">=</span>public --add-port<span class="token operator">=</span><span class="token number">5601</span>/tcp --permanent
+</code></pre></div><p>启动</p> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token function">su</span> iekr
+<span class="token builtin class-name">cd</span> /opt/kibana-7.15.0-linux-x86_64/bin/
+<span class="token function">nohup</span> ./kibana <span class="token operator">&amp;</span>  <span class="token comment">#后台运行  前台./kibana</span>
+</code></pre></div><h2 id="elasticsearch-核心概念"><a href="#elasticsearch-核心概念" class="header-anchor">#</a> ElasticSearch 核心概念</h2> <ul><li><p>索引(index)
+ElasticSearch存储数据的地方 可以理解为关系型数据库中的数据库概念</p></li> <li><p>映射(mapping)</p> <p>mapping定义了每个字段的类型 字段所使用的分词器等 相定义关系型数据库中的表结构</p></li> <li><p>文档(document)
+ElasticSearch中的最小数据单元 以json格式显示 一个document相当于 关系型数据库的一行数据</p></li> <li><p>倒排索引
+一个倒排索引由文档中所有不重复此的列表构成 对应其中每个词 对应一个包含它的文档id列表</p></li> <li><p>类型(type)</p> <p>一种type就像一类表 如用户表 角色表等
+在ElasticSearch7.x type默认为_doc</p> <p>5.x中一个index可以有多种type</p> <p>6.x中一个index只能有一种type</p></li></ul> <h2 id="操作elasticsearch"><a href="#操作elasticsearch" class="header-anchor">#</a> 操作ElasticSearch</h2> <h3 id="restful风格"><a href="#restful风格" class="header-anchor">#</a> RESTful风格</h3> <p>REST 表述性状态转移 是一组架构约束条件和原则 满足这些约束条件和原则的应用程序或设计就是RESTful 是与只能怪定义接口的规范</p> <h3 id="操作索引"><a href="#操作索引" class="header-anchor">#</a> 操作索引</h3> <p>以下操作使用postman工具发送请求</p> <h4 id="添加索引"><a href="#添加索引" class="header-anchor">#</a> 添加索引</h4> <p>使用PUT请求 在uri地址后加上索引名称</p> <div class="language- extra-class"><pre class="language-text"><code>192.168.130.124:9200/goods_index
+</code></pre></div><h4 id="查询索引"><a href="#查询索引" class="header-anchor">#</a> 查询索引</h4> <p>使用GET请求 在uri地址后加上索引名称</p> <div class="language- extra-class"><pre class="language-text"><code>192.168.130.124:9200/goods_index
+</code></pre></div><p>查询多个使用逗号分隔</p> <div class="language- extra-class"><pre class="language-text"><code>192.168.130.124:9200/goods_index,goods_index2
+</code></pre></div><p>查询全部使用_all</p> <div class="language- extra-class"><pre class="language-text"><code>192.168.130.124:9200/_all
+</code></pre></div><h4 id="删除索引"><a href="#删除索引" class="header-anchor">#</a> 删除索引</h4> <p>使用DELETE请求  在uri地址后加上索引名称</p> <div class="language- extra-class"><pre class="language-text"><code>192.168.130.124:9200/goods_index
+</code></pre></div><h4 id="关闭指定索引"><a href="#关闭指定索引" class="header-anchor">#</a> 关闭指定索引</h4> <p>关闭后只是无法使用 并不会删除此索引</p> <div class="language- extra-class"><pre class="language-text"><code>192.168.130.124:9200/goods_index/_close
+</code></pre></div><p>打开索引</p> <div class="language- extra-class"><pre class="language-text"><code>192.168.130.124:9200/goods_index/_open
+</code></pre></div><h3 id="操作映射"><a href="#操作映射" class="header-anchor">#</a> 操作映射</h3> <ul><li>简单数据类型
+<ul><li>字符串
+<ul><li>text 会分词,不支持聚合</li> <li>keyword 不会分词 将全部内容作为一个词条 支持聚合</li></ul></li> <li>数组
+<ul><li><img src="https://gitee.com/Iekrwh/md-images/raw/master/images/image-20211007002644122.png" alt=""></li></ul></li> <li>布尔</li> <li>二进制
+<ul><li>binary</li></ul></li> <li>范围类型
+<ul><li>integer_range</li> <li>float_range</li> <li>long_range</li> <li>double_range</li> <li>date_range</li></ul></li> <li>日期</li></ul></li> <li>复杂数据类型
+<ul><li>数组:[]</li> <li>对象:{}</li></ul></li></ul> <h4 id="添加映射"><a href="#添加映射" class="header-anchor">#</a> 添加映射</h4> <p>以下操作使用Kibana操作</p> <p>http://192.168.130.124:5601/app/dev_tools#/console</p> <div class="language-apl extra-class"><pre class="language-apl"><code><span class="token comment"># 创建索引</span>
+PUT person
+<span class="token comment"># 查询索引</span>
+GET person
+
+<span class="token comment"># 添加映射</span>
+PUT person<span class="token monadic-operator operator">/</span>_mapping
+<span class="token dfn builtin">{</span>
+  &quot;properties&quot;<span class="token dfn builtin">:</span><span class="token dfn builtin">{</span>
+    &quot;name&quot;<span class="token dfn builtin">:</span><span class="token dfn builtin">{</span>
+      &quot;type&quot;<span class="token dfn builtin">:</span>&quot;keyword&quot;
+    <span class="token dfn builtin">}</span><span class="token function">,</span>
+    &quot;age&quot;<span class="token dfn builtin">:</span><span class="token dfn builtin">{</span>
+      &quot;type&quot;<span class="token dfn builtin">:</span>&quot;integer&quot;
+    <span class="token dfn builtin">}</span>
+  <span class="token dfn builtin">}</span>
+<span class="token dfn builtin">}</span>
+
+<span class="token comment"># 查询映射</span>
+GET person<span class="token monadic-operator operator">/</span>_mapping
+
+<span class="token comment"># 删除索引</span>
+DELETE person
+
+<span class="token comment"># 创建索引并添加映射</span>
+PUT person
+<span class="token dfn builtin">{</span>
+  &quot;mappings&quot;<span class="token dfn builtin">:</span> <span class="token dfn builtin">{</span>
+    &quot;properties&quot;<span class="token dfn builtin">:</span> <span class="token dfn builtin">{</span>
+        &quot;name&quot;<span class="token dfn builtin">:</span><span class="token dfn builtin">{</span>
+      &quot;type&quot;<span class="token dfn builtin">:</span>&quot;keyword&quot;
+    <span class="token dfn builtin">}</span><span class="token function">,</span>
+    &quot;age&quot;<span class="token dfn builtin">:</span><span class="token dfn builtin">{</span>
+      &quot;type&quot;<span class="token dfn builtin">:</span>&quot;integer&quot;
+    <span class="token dfn builtin">}</span>
+    <span class="token dfn builtin">}</span>
+  <span class="token dfn builtin">}</span>
+<span class="token dfn builtin">}</span>
+
+<span class="token comment"># 查询索引</span>
+GET person
+
+<span class="token comment"># 添加字段</span>
+PUT person<span class="token monadic-operator operator">/</span>_mapping
+<span class="token dfn builtin">{</span>
+  &quot;properties&quot;<span class="token dfn builtin">:</span><span class="token dfn builtin">{</span>
+    &quot;address&quot;<span class="token dfn builtin">:</span><span class="token dfn builtin">{</span>
+      &quot;type&quot;<span class="token dfn builtin">:</span>&quot;text&quot;
+    <span class="token dfn builtin">}</span>
+  <span class="token dfn builtin">}</span>
+<span class="token dfn builtin">}</span>
+</code></pre></div><h3 id="操作文档"><a href="#操作文档" class="header-anchor">#</a> 操作文档</h3> <div class="language-apl extra-class"><pre class="language-apl"><code><span class="token comment"># 查询索引</span>
+GET person
+
+
+<span class="token comment"># 添加文档 指定id   可以使用PUT或POST请求</span>
+PUT person<span class="token monadic-operator operator">/</span>_doc<span class="token monadic-operator operator">/</span><span class="token number">1</span>
+<span class="token dfn builtin">{</span>
+  &quot;name&quot;<span class="token dfn builtin">:</span>&quot;zhangsan&quot;<span class="token function">,</span>
+  &quot;age&quot;<span class="token dfn builtin">:</span><span class="token number">20</span><span class="token function">,</span>
+  &quot;address&quot;<span class="token dfn builtin">:</span>&quot;北京&quot;
+<span class="token dfn builtin">}</span>
+
+
+<span class="token comment"># 添加文档 不指定id  必须为POST请求</span>
+POST person<span class="token monadic-operator operator">/</span>_doc
+<span class="token dfn builtin">{</span>
+  &quot;name&quot;<span class="token dfn builtin">:</span>&quot;李四&quot;<span class="token function">,</span>
+  &quot;age&quot;<span class="token dfn builtin">:</span><span class="token number">30</span><span class="token function">,</span>
+  &quot;address&quot;<span class="token dfn builtin">:</span>&quot;广东&quot;
+<span class="token dfn builtin">}</span>
+
+
+<span class="token comment"># 根据id查询文档</span>
+GET person<span class="token monadic-operator operator">/</span>_doc<span class="token monadic-operator operator">/</span><span class="token number">1</span>
+
+
+<span class="token comment"># 查询所有文档</span>
+GET person<span class="token monadic-operator operator">/</span>_search
+
+<span class="token comment"># 修改文档   必须为PUT请求  如果id存在则修改 不存在则自动创建</span>
+PUT person<span class="token monadic-operator operator">/</span>_doc<span class="token monadic-operator operator">/</span><span class="token number">1</span>
+<span class="token dfn builtin">{</span>
+  &quot;name&quot;<span class="token dfn builtin">:</span>&quot;wangwu&quot;<span class="token function">,</span>
+  &quot;age&quot;<span class="token dfn builtin">:</span><span class="token number">20</span><span class="token function">,</span>
+  &quot;address&quot;<span class="token dfn builtin">:</span>&quot;北京&quot;
+<span class="token dfn builtin">}</span>
+
+<span class="token comment"># 根据ID删除文档</span>
+DELETE person<span class="token monadic-operator operator">/</span>_doc<span class="token monadic-operator operator">/</span><span class="token number">1</span>
+</code></pre></div><h2 id="分词器"><a href="#分词器" class="header-anchor">#</a> 分词器</h2> <p><img src="https://gitee.com/Iekrwh/md-images/raw/master/images/image-20211007015716324.png" alt="image-20211007015716324"></p> <p>但ES原始的分词器对中文不太友好</p> <h2 id="ik分词器"><a href="#ik分词器" class="header-anchor">#</a> IK分词器</h2> <p>IKAnalyzer是一个开源的 基于java语言开发的轻量级的中文分词工具包</p> <p>是一个基于Maven构建的项目  具有60万字/秒的高速处理能力 支持用户词典扩展定义</p> <p>https://github.com/medcl/elasticsearch-analysis-ik</p> <h3 id="安装"><a href="#安装" class="header-anchor">#</a> 安装</h3> <ul><li>安装JDK 由于ES内置了JDK 我们将ES内置的JDK设置为系统环境变量</li></ul> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token function">vim</span> /etc/profile
+
+<span class="token builtin class-name">export</span> <span class="token assign-left variable">JAVA_HOME</span><span class="token operator">=</span>/opt/elasticsearch-7.15.0/jdk
+<span class="token builtin class-name">export</span> <span class="token assign-left variable"><span class="token environment constant">PATH</span></span><span class="token operator">=</span><span class="token environment constant">$PATH</span><span class="token builtin class-name">:</span><span class="token variable">${JAVA_HOME}</span>/bin
+
+<span class="token builtin class-name">source</span> /etc/profile
+</code></pre></div><ul><li>安装Maven  -- 已不需要</li></ul> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token function">wget</span> https://mirrors.bfsu.edu.cn/apache/maven/maven-3/3.8.3/binaries/apache-maven-3.8.3-bin.tar.gz
+<span class="token function">tar</span> -zxvf apache-maven-3.8.3-bin.tar.gz
+<span class="token function">ln</span> -s apache-maven-3.8.3 maven
+<span class="token comment">#配置环境变量</span>
+<span class="token function">vim</span> /etc/profile.d/maven.sh
+
+<span class="token builtin class-name">export</span> <span class="token assign-left variable">MAVEN_HOME</span><span class="token operator">=</span>/root/maven
+<span class="token builtin class-name">export</span> <span class="token assign-left variable"><span class="token environment constant">PATH</span></span><span class="token operator">=</span><span class="token variable">${MAVEN_HOME}</span>/bin:<span class="token variable">${<span class="token environment constant">PATH</span>}</span>
+
+<span class="token builtin class-name">source</span> /etc/profile.d/maven.sh
+mvn -v
+</code></pre></div><ul><li>安装IK分词器  --已不需要</li></ul> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token function">wget</span> https://github.com/medcl/elasticsearch-analysis-ik/archive/refs/tags/v7.15.0.zip  <span class="token comment">#这里下载的是源码</span>
+<span class="token comment"># 由于是zip文件所以需要unzip命令</span>
+yum <span class="token function">install</span> -y <span class="token function">zip</span>
+yum <span class="token function">install</span> -y <span class="token function">unzip</span>
+<span class="token comment">#解压</span>
+<span class="token function">unzip</span> v7.15.0.zip
+
+<span class="token builtin class-name">cd</span> /root/elasticsearch-analysis-ik-7.15.0/
+<span class="token comment">#编译打包</span>
+mvn package
+</code></pre></div><ul><li>将编译好的插件导入到ES中</li></ul> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token builtin class-name">cd</span> /opt/elasticsearch-7.15.0/plugins/
+<span class="token function">mkdir</span> analysis-ik
+<span class="token builtin class-name">cd</span> analysis-ik/
+<span class="token comment">#重启es</span>
+
+</code></pre></div><h3 id="使用"><a href="#使用" class="header-anchor">#</a> 使用</h3> <div class="language-apl extra-class"><pre class="language-apl"><code>
+<span class="token comment"># ES内置分词器</span>
+GET _analyze
+<span class="token dfn builtin">{</span>
+  &quot;analyzer&quot;<span class="token dfn builtin">:</span> &quot;standard&quot;<span class="token function">,</span>
+  &quot;text&quot;<span class="token dfn builtin">:</span> &quot;你是试试水&quot;
+<span class="token dfn builtin">}</span>
+
+<span class="token comment"># ik分词器,粗粒度分词</span>
+GET _analyze
+<span class="token dfn builtin">{</span>
+  &quot;analyzer&quot;<span class="token dfn builtin">:</span> &quot;ik_smart&quot;<span class="token function">,</span>
+  &quot;text&quot;<span class="token dfn builtin">:</span> &quot;你是试试水&quot;
+<span class="token dfn builtin">}</span>
+
+<span class="token comment"># ik分词器,粗粒度分词</span>
+GET _analyze
+<span class="token dfn builtin">{</span>
+  &quot;analyzer&quot;<span class="token dfn builtin">:</span> &quot;ik_max_word&quot;<span class="token function">,</span>
+  &quot;text&quot;<span class="token dfn builtin">:</span> &quot;你是试试水&quot;
+<span class="token dfn builtin">}</span>
+
+</code></pre></div><h4 id="查询文档"><a href="#查询文档" class="header-anchor">#</a> 查询文档</h4> <ul><li>词条查询:tern
+<ul><li>词条查询不会分析查询条件 只有当词条和查询字符串完全匹配时才匹配搜索</li></ul></li> <li>全文查询:match
+<ul><li>全文查询会分析查询条件 先将查询条件进行分词 然后查询 求并集</li></ul></li></ul> <div class="language-apl extra-class"><pre class="language-apl"><code>PUT person<span class="token monadic-operator operator">/</span>_doc<span class="token monadic-operator operator">/</span><span class="token number">2</span>
+<span class="token dfn builtin">{</span>
+  &quot;name&quot;<span class="token dfn builtin">:</span>&quot;李四&quot;<span class="token function">,</span>
+  &quot;age&quot;<span class="token dfn builtin">:</span><span class="token number">30</span><span class="token function">,</span>
+  &quot;address&quot;<span class="token dfn builtin">:</span>&quot;华为<span class="token number">5</span>G手机&quot;
+<span class="token dfn builtin">}</span>
+
+GET person<span class="token monadic-operator operator">/</span>_doc<span class="token monadic-operator operator">/</span><span class="token number">2</span>
+
+<span class="token comment"># term 词条查询 查询条件字符串和词条要完全匹配</span>
+<span class="token comment"># es默认使用的分词器是standard 一个子一个词</span>
+GET person<span class="token monadic-operator operator">/</span>_search
+<span class="token dfn builtin">{</span>
+  &quot;query&quot;<span class="token dfn builtin">:</span><span class="token dfn builtin">{</span>
+    &quot;term&quot;<span class="token dfn builtin">:</span> <span class="token dfn builtin">{</span>
+      &quot;address&quot;<span class="token dfn builtin">:</span> <span class="token dfn builtin">{</span>
+        &quot;value&quot;<span class="token dfn builtin">:</span> &quot;手机&quot;
+      <span class="token dfn builtin">}</span>
+    <span class="token dfn builtin">}</span>
+  <span class="token dfn builtin">}</span>
+<span class="token dfn builtin">}</span>
+
+DELETE person
+
+<span class="token comment"># 创建索引 添加映射 指定使用ik分词器</span>
+PUT person
+<span class="token dfn builtin">{</span>
+  &quot;mappings&quot;<span class="token dfn builtin">:</span> <span class="token dfn builtin">{</span>
+    &quot;properties&quot;<span class="token dfn builtin">:</span> <span class="token dfn builtin">{</span>
+      &quot;name&quot;<span class="token dfn builtin">:</span><span class="token dfn builtin">{</span>
+        &quot;type&quot;<span class="token dfn builtin">:</span> &quot;keyword&quot;
+      <span class="token dfn builtin">}</span><span class="token function">,</span>
+      &quot;address&quot;<span class="token dfn builtin">:</span><span class="token dfn builtin">{</span>
+        &quot;type&quot;<span class="token dfn builtin">:</span> &quot;text&quot;<span class="token function">,</span>
+        &quot;analyzer&quot;<span class="token dfn builtin">:</span> &quot;ik_max_word&quot;
+      <span class="token dfn builtin">}</span>
+    <span class="token dfn builtin">}</span>
+  <span class="token dfn builtin">}</span>
+<span class="token dfn builtin">}</span>
+
+GET person
+
+<span class="token comment"># 添加文档</span>
+PUT person<span class="token monadic-operator operator">/</span>_doc<span class="token monadic-operator operator">/</span><span class="token number">1</span>
+<span class="token dfn builtin">{</span>
+  &quot;name&quot;<span class="token dfn builtin">:</span>&quot;张三&quot;<span class="token function">,</span>
+  &quot;age&quot;<span class="token dfn builtin">:</span><span class="token number">30</span><span class="token function">,</span>
+  &quot;address&quot;<span class="token dfn builtin">:</span>&quot;华为<span class="token number">5</span>G手机&quot;
+<span class="token dfn builtin">}</span>
+PUT person<span class="token monadic-operator operator">/</span>_doc<span class="token monadic-operator operator">/</span><span class="token number">2</span>
+<span class="token dfn builtin">{</span>
+  &quot;name&quot;<span class="token dfn builtin">:</span>&quot;李四&quot;<span class="token function">,</span>
+  &quot;age&quot;<span class="token dfn builtin">:</span><span class="token number">30</span><span class="token function">,</span>
+  &quot;address&quot;<span class="token dfn builtin">:</span>&quot;广东&quot;
+<span class="token dfn builtin">}</span>
+PUT person<span class="token monadic-operator operator">/</span>_doc<span class="token monadic-operator operator">/</span><span class="token number">3</span>
+<span class="token dfn builtin">{</span>
+  &quot;name&quot;<span class="token dfn builtin">:</span>&quot;王五&quot;<span class="token function">,</span>
+  &quot;age&quot;<span class="token dfn builtin">:</span><span class="token number">30</span><span class="token function">,</span>
+  &quot;address&quot;<span class="token dfn builtin">:</span>&quot;小米<span class="token number">5</span>G手机&quot;
+<span class="token dfn builtin">}</span>
+
+GET person<span class="token monadic-operator operator">/</span>_search
+
+<span class="token comment"># 查询 term词条查询</span>
+GET person<span class="token monadic-operator operator">/</span>_search
+<span class="token dfn builtin">{</span>
+  &quot;query&quot;<span class="token dfn builtin">:</span><span class="token dfn builtin">{</span>
+    &quot;term&quot;<span class="token dfn builtin">:</span> <span class="token dfn builtin">{</span>
+      &quot;address&quot;<span class="token dfn builtin">:</span> <span class="token dfn builtin">{</span>
+        &quot;value&quot;<span class="token dfn builtin">:</span> &quot;手机&quot;
+      <span class="token dfn builtin">}</span>
+    <span class="token dfn builtin">}</span>
+  <span class="token dfn builtin">}</span>
+<span class="token dfn builtin">}</span>
+
+<span class="token comment"># match 先会对查询的字符串进行分词 在查询 求交集</span>
+GET person<span class="token monadic-operator operator">/</span>_search
+<span class="token dfn builtin">{</span>
+  &quot;query&quot;<span class="token dfn builtin">:</span> <span class="token dfn builtin">{</span>
+    &quot;match&quot;<span class="token dfn builtin">:</span> <span class="token dfn builtin">{</span>
+      &quot;address&quot;<span class="token dfn builtin">:</span> &quot;苹果手机&quot;
+    <span class="token dfn builtin">}</span>
+  <span class="token dfn builtin">}</span>
+<span class="token dfn builtin">}</span>
+
+</code></pre></div><h2 id="javaapi"><a href="#javaapi" class="header-anchor">#</a> JavaApi</h2> <ol><li><p>创建springboot项目 并引入ES</p> <p><img src="https://gitee.com/Iekrwh/md-images/raw/master/images/image-20211007152049832.png" alt="image-20211007152049832"></p></li> <li><p>创建application.yml 配置文件</p> <div class="language-yaml extra-class"><pre class="language-yaml"><code><span class="token key atrule">elasticsearch</span><span class="token punctuation">:</span>
+  <span class="token key atrule">host</span><span class="token punctuation">:</span> 192.168.130.124
+  <span class="token key atrule">port</span><span class="token punctuation">:</span> <span class="token number">9200</span>
+</code></pre></div></li> <li><p>创建ElasticSearchConfig配置类 加载配置文件 并返回一个es客户端对象</p> <div class="language-java extra-class"><pre class="language-java"><code><span class="token keyword">package</span> <span class="token namespace">com<span class="token punctuation">.</span>itheima<span class="token punctuation">.</span>elasticsearchdemo<span class="token punctuation">.</span>config</span><span class="token punctuation">;</span>
+
+
+<span class="token keyword">import</span> <span class="token namespace">org<span class="token punctuation">.</span>apache<span class="token punctuation">.</span>http<span class="token punctuation">.</span></span><span class="token class-name">HttpHost</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token namespace">org<span class="token punctuation">.</span>elasticsearch<span class="token punctuation">.</span>client<span class="token punctuation">.</span></span><span class="token class-name">RestClient</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token namespace">org<span class="token punctuation">.</span>elasticsearch<span class="token punctuation">.</span>client<span class="token punctuation">.</span></span><span class="token class-name">RestHighLevelClient</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token namespace">org<span class="token punctuation">.</span>springframework<span class="token punctuation">.</span>boot<span class="token punctuation">.</span>context<span class="token punctuation">.</span>properties<span class="token punctuation">.</span></span><span class="token class-name">ConfigurationProperties</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token namespace">org<span class="token punctuation">.</span>springframework<span class="token punctuation">.</span>context<span class="token punctuation">.</span>annotation<span class="token punctuation">.</span></span><span class="token class-name">Bean</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token namespace">org<span class="token punctuation">.</span>springframework<span class="token punctuation">.</span>context<span class="token punctuation">.</span>annotation<span class="token punctuation">.</span></span><span class="token class-name">Configuration</span><span class="token punctuation">;</span>
+
+<span class="token annotation punctuation">@Configuration</span>
+<span class="token annotation punctuation">@ConfigurationProperties</span><span class="token punctuation">(</span>prefix <span class="token operator">=</span> <span class="token string">&quot;elasticsearch&quot;</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">ElasticSearchConfig</span> <span class="token punctuation">{</span>
+
+    <span class="token keyword">private</span> <span class="token class-name">String</span> host<span class="token punctuation">;</span>
+    <span class="token keyword">private</span> <span class="token keyword">int</span> port<span class="token punctuation">;</span>
+
+    <span class="token keyword">public</span> <span class="token class-name">String</span> <span class="token function">getHost</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> host<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">setHost</span><span class="token punctuation">(</span><span class="token class-name">String</span> host<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>host <span class="token operator">=</span> host<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">getPort</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> port<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">setPort</span><span class="token punctuation">(</span><span class="token keyword">int</span> port<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>port <span class="token operator">=</span> port<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token annotation punctuation">@Bean</span>
+    <span class="token keyword">public</span> <span class="token class-name">RestHighLevelClient</span> <span class="token function">client</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">RestHighLevelClient</span><span class="token punctuation">(</span><span class="token class-name">RestClient</span><span class="token punctuation">.</span><span class="token function">builder</span><span class="token punctuation">(</span>
+                <span class="token keyword">new</span> <span class="token class-name">HttpHost</span><span class="token punctuation">(</span>host<span class="token punctuation">,</span>port<span class="token punctuation">,</span><span class="token string">&quot;http&quot;</span><span class="token punctuation">)</span>
+        <span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div></li> <li><p>注入对象 使用</p> <div class="language-java extra-class"><pre class="language-java"><code><span class="token comment">//1.创建es客户端对象</span>
+<span class="token annotation punctuation">@Autowired</span>
+<span class="token keyword">private</span> <span class="token class-name">RestHighLevelClient</span> restHighLevelClient<span class="token punctuation">;</span>
+</code></pre></div></li></ol> <h3 id="添加索引-2"><a href="#添加索引-2" class="header-anchor">#</a> 添加索引</h3> <div class="language-java extra-class"><pre class="language-java"><code><span class="token comment">//添加索引</span>
+<span class="token annotation punctuation">@Test</span>
+<span class="token keyword">void</span> <span class="token function">addIndex</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">throws</span> <span class="token class-name">IOException</span> <span class="token punctuation">{</span>
+    <span class="token comment">//获取操作索引的对象</span>
+    <span class="token class-name">IndicesClient</span> indices <span class="token operator">=</span> restHighLevelClient<span class="token punctuation">.</span><span class="token function">indices</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">//添加</span>
+    <span class="token class-name">CreateIndexRequest</span> createIndex <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">CreateIndexRequest</span><span class="token punctuation">(</span><span class="token string">&quot;itheima&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">//索引名称</span>
+    <span class="token class-name">CreateIndexResponse</span> createIndexResponse <span class="token operator">=</span> indices<span class="token punctuation">.</span><span class="token function">create</span><span class="token punctuation">(</span>createIndex<span class="token punctuation">,</span> <span class="token class-name">RequestOptions</span><span class="token punctuation">.</span>DEFAULT<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">//根据返回值判断结果</span>
+    <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>createIndexResponse<span class="token punctuation">.</span><span class="token function">isAcknowledged</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><ul><li>添加索引并添加映射</li></ul> <div class="language-java extra-class"><pre class="language-java"><code><span class="token comment">//添加索引并添加映射</span>
+<span class="token annotation punctuation">@Test</span>
+<span class="token keyword">void</span> <span class="token function">addIndexAndMapping</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">throws</span> <span class="token class-name">IOException</span> <span class="token punctuation">{</span>
+    <span class="token comment">//获取操作索引的对象</span>
+    <span class="token class-name">IndicesClient</span> indices <span class="token operator">=</span> restHighLevelClient<span class="token punctuation">.</span><span class="token function">indices</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token class-name">CreateIndexRequest</span> request <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">CreateIndexRequest</span><span class="token punctuation">(</span><span class="token string">&quot;twitter&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">// 向索引添加映射</span>
+    request<span class="token punctuation">.</span><span class="token function">source</span><span class="token punctuation">(</span><span class="token string">&quot;{\n&quot;</span> <span class="token operator">+</span>
+            <span class="token string">&quot;    \&quot;settings\&quot; : {\n&quot;</span> <span class="token operator">+</span>
+            <span class="token string">&quot;        \&quot;number_of_shards\&quot; : 3,\n&quot;</span> <span class="token operator">+</span>
+            <span class="token string">&quot;        \&quot;number_of_replicas\&quot; : 2\n&quot;</span> <span class="token operator">+</span>
+            <span class="token string">&quot;    },\n&quot;</span> <span class="token operator">+</span>
+            <span class="token string">&quot;    \&quot;mappings\&quot; : {\n&quot;</span> <span class="token operator">+</span>
+            <span class="token string">&quot;        \&quot;tweet\&quot; : {\n&quot;</span> <span class="token operator">+</span>
+            <span class="token string">&quot;            \&quot;properties\&quot; : {\n&quot;</span> <span class="token operator">+</span>
+            <span class="token string">&quot;                \&quot;message\&quot; : { \&quot;type\&quot; : \&quot;text\&quot; }\n&quot;</span> <span class="token operator">+</span>
+            <span class="token string">&quot;            }\n&quot;</span> <span class="token operator">+</span>
+            <span class="token string">&quot;        }\n&quot;</span> <span class="token operator">+</span>
+            <span class="token string">&quot;    },\n&quot;</span> <span class="token operator">+</span>
+            <span class="token string">&quot;    \&quot;aliases\&quot; : {\n&quot;</span> <span class="token operator">+</span>
+            <span class="token string">&quot;        \&quot;twitter_alias\&quot; : {}\n&quot;</span> <span class="token operator">+</span>
+            <span class="token string">&quot;    }\n&quot;</span> <span class="token operator">+</span>
+            <span class="token string">&quot;}&quot;</span><span class="token punctuation">,</span> <span class="token class-name">XContentType</span><span class="token punctuation">.</span>JSON<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token class-name">CreateIndexResponse</span> createIndexResponse <span class="token operator">=</span> indices<span class="token punctuation">.</span><span class="token function">create</span><span class="token punctuation">(</span>request<span class="token punctuation">,</span> <span class="token class-name">RequestOptions</span><span class="token punctuation">.</span>DEFAULT<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">//根据返回值判断结果</span>
+    <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>createIndexResponse<span class="token punctuation">.</span><span class="token function">isAcknowledged</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h4 id="查询索引-2"><a href="#查询索引-2" class="header-anchor">#</a> 查询索引</h4> <div class="language-java extra-class"><pre class="language-java"><code><span class="token comment">//查询索引</span>
+<span class="token annotation punctuation">@Test</span>
+<span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">queryIndex</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">throws</span> <span class="token class-name">IOException</span> <span class="token punctuation">{</span>
+    <span class="token class-name">GetIndexRequest</span> request <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">GetIndexRequest</span><span class="token punctuation">(</span><span class="token string">&quot;twitter&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token class-name">GetIndexResponse</span> getIndexResponse <span class="token operator">=</span> restHighLevelClient<span class="token punctuation">.</span><span class="token function">indices</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>request<span class="token punctuation">,</span> <span class="token class-name">RequestOptions</span><span class="token punctuation">.</span>DEFAULT<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>getIndexResponse<span class="token punctuation">.</span><span class="token function">getAliases</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>getIndexResponse<span class="token punctuation">.</span><span class="token function">getMappings</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h4 id="删除索引-2"><a href="#删除索引-2" class="header-anchor">#</a> 删除索引</h4> <div class="language-java extra-class"><pre class="language-java"><code><span class="token comment">//删除索引</span>
+<span class="token annotation punctuation">@Test</span>
+<span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">deleteIndex</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">throws</span> <span class="token class-name">IOException</span> <span class="token punctuation">{</span>
+    <span class="token class-name">IndicesClient</span> indices <span class="token operator">=</span> restHighLevelClient<span class="token punctuation">.</span><span class="token function">indices</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token class-name">DeleteIndexRequest</span> deleteIndexRequest <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">DeleteIndexRequest</span><span class="token punctuation">(</span><span class="token string">&quot;itheima&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token class-name">AcknowledgedResponse</span> acknowledgedResponse <span class="token operator">=</span> indices<span class="token punctuation">.</span><span class="token function">delete</span><span class="token punctuation">(</span>deleteIndexRequest<span class="token punctuation">,</span> <span class="token class-name">RequestOptions</span><span class="token punctuation">.</span>DEFAULT<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>acknowledgedResponse<span class="token punctuation">.</span><span class="token function">isAcknowledged</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h4 id="判断索引是否存在"><a href="#判断索引是否存在" class="header-anchor">#</a> 判断索引是否存在</h4> <div class="language-java extra-class"><pre class="language-java"><code><span class="token comment">//判断索引是否存在</span>
+<span class="token annotation punctuation">@Test</span>
+<span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">existIndex</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">throws</span> <span class="token class-name">IOException</span> <span class="token punctuation">{</span>
+    <span class="token class-name">IndicesClient</span> indices <span class="token operator">=</span> restHighLevelClient<span class="token punctuation">.</span><span class="token function">indices</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token class-name">GetIndexRequest</span> getRequest <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">GetIndexRequest</span><span class="token punctuation">(</span><span class="token string">&quot;itheima&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">boolean</span> exists <span class="token operator">=</span> indices<span class="token punctuation">.</span><span class="token function">exists</span><span class="token punctuation">(</span>getRequest<span class="token punctuation">,</span> <span class="token class-name">RequestOptions</span><span class="token punctuation">.</span>DEFAULT<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>exists<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="添加-修改文档"><a href="#添加-修改文档" class="header-anchor">#</a> 添加/修改文档</h3> <p>当id存在时则修改 不存在时则添加</p> <h4 id="map"><a href="#map" class="header-anchor">#</a> Map</h4> <div class="language-JAVA extra-class"><pre class="language-java"><code><span class="token comment">//添加/修改 map</span>
+<span class="token annotation punctuation">@Test</span>
+<span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">addDoc</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">throws</span> <span class="token class-name">IOException</span> <span class="token punctuation">{</span>
+    <span class="token comment">//添加数据对象 map</span>
+    <span class="token class-name">Map</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">,</span> <span class="token class-name">String</span><span class="token punctuation">&gt;</span></span> data <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">HashMap</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    data<span class="token punctuation">.</span><span class="token function">put</span><span class="token punctuation">(</span><span class="token string">&quot;address&quot;</span><span class="token punctuation">,</span><span class="token string">&quot;背景&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    data<span class="token punctuation">.</span><span class="token function">put</span><span class="token punctuation">(</span><span class="token string">&quot;name&quot;</span><span class="token punctuation">,</span><span class="token string">&quot;钻石&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    data<span class="token punctuation">.</span><span class="token function">put</span><span class="token punctuation">(</span><span class="token string">&quot;age&quot;</span><span class="token punctuation">,</span><span class="token string">&quot;11&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">//1.获取文档对象</span>
+    <span class="token class-name">IndexRequest</span> indexRequest <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">IndexRequest</span><span class="token punctuation">(</span><span class="token string">&quot;twitter&quot;</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">id</span><span class="token punctuation">(</span><span class="token string">&quot;1&quot;</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">source</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">//添加数据</span>
+    <span class="token class-name">IndexResponse</span> index <span class="token operator">=</span> restHighLevelClient<span class="token punctuation">.</span><span class="token function">index</span><span class="token punctuation">(</span>indexRequest<span class="token punctuation">,</span> <span class="token class-name">RequestOptions</span><span class="token punctuation">.</span>DEFAULT<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">//打印响应结果</span>
+    <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>index<span class="token punctuation">.</span><span class="token function">getId</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h4 id="json"><a href="#json" class="header-anchor">#</a> JSON</h4> <div class="language-java extra-class"><pre class="language-java"><code><span class="token comment">//添加/修改 json</span>
+<span class="token annotation punctuation">@Test</span>
+<span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">addDoc2</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">throws</span> <span class="token class-name">IOException</span> <span class="token punctuation">{</span>
+   <span class="token comment">//创建对象</span>
+    <span class="token class-name">Person</span> p <span class="token operator">=</span><span class="token keyword">new</span> <span class="token class-name">Person</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    p<span class="token punctuation">.</span><span class="token function">setId</span><span class="token punctuation">(</span><span class="token string">&quot;2&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    p<span class="token punctuation">.</span><span class="token function">setName</span><span class="token punctuation">(</span><span class="token string">&quot;iekr&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    p<span class="token punctuation">.</span><span class="token function">setAge</span><span class="token punctuation">(</span><span class="token number">15</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    p<span class="token punctuation">.</span><span class="token function">setAddress</span><span class="token punctuation">(</span><span class="token string">&quot;广东&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token class-name">String</span> json <span class="token operator">=</span> JSON<span class="token punctuation">.</span><span class="token function">toJSONString</span><span class="token punctuation">(</span>p<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">//1.获取文档对象</span>
+    <span class="token class-name">IndexRequest</span> indexRequest <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">IndexRequest</span><span class="token punctuation">(</span><span class="token string">&quot;twitter&quot;</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">id</span><span class="token punctuation">(</span>p<span class="token punctuation">.</span><span class="token function">getId</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">source</span><span class="token punctuation">(</span>json<span class="token punctuation">,</span><span class="token class-name">XContentType</span><span class="token punctuation">.</span>JSON<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">//添加数据</span>
+    <span class="token class-name">IndexResponse</span> index <span class="token operator">=</span> restHighLevelClient<span class="token punctuation">.</span><span class="token function">index</span><span class="token punctuation">(</span>indexRequest<span class="token punctuation">,</span> <span class="token class-name">RequestOptions</span><span class="token punctuation">.</span>DEFAULT<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">//打印响应结果</span>
+    <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>index<span class="token punctuation">.</span><span class="token function">getId</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="查询文档-2"><a href="#查询文档-2" class="header-anchor">#</a> 查询文档</h3> <div class="language-java extra-class"><pre class="language-java"><code>    <span class="token comment">//根据id查询文档</span>
+    <span class="token annotation punctuation">@Test</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">findDocById</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">throws</span> <span class="token class-name">IOException</span> <span class="token punctuation">{</span>
+        <span class="token class-name">GetRequest</span> getRequest <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">GetRequest</span><span class="token punctuation">(</span><span class="token string">&quot;twitter&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;1&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">//        getRequest.id(&quot;1&quot;);  //单独指定id</span>
+        <span class="token class-name">GetResponse</span> documentFields <span class="token operator">=</span> restHighLevelClient<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>getRequest<span class="token punctuation">,</span> <span class="token class-name">RequestOptions</span><span class="token punctuation">.</span>DEFAULT<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>documentFields<span class="token punctuation">.</span><span class="token function">getSourceAsString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//获取JSON字符串</span>
+
+    <span class="token punctuation">}</span>
+</code></pre></div><h3 id="删除文档"><a href="#删除文档" class="header-anchor">#</a> 删除文档</h3> <div class="language-java extra-class"><pre class="language-java"><code><span class="token comment">//根据id删除文档</span>
+<span class="token annotation punctuation">@Test</span>
+<span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">delDoc</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">throws</span> <span class="token class-name">IOException</span> <span class="token punctuation">{</span>
+    <span class="token class-name">DeleteRequest</span> delete <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">DeleteRequest</span><span class="token punctuation">(</span><span class="token string">&quot;twitter&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;1&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token class-name">DeleteResponse</span> response <span class="token operator">=</span> restHighLevelClient<span class="token punctuation">.</span><span class="token function">delete</span><span class="token punctuation">(</span>delete<span class="token punctuation">,</span> <span class="token class-name">RequestOptions</span><span class="token punctuation">.</span>DEFAULT<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>response<span class="token punctuation">.</span><span class="token function">getId</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+
+<span class="token punctuation">}</span>
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/doc-vuepress/JavaEE/Docker.html" class="prev">
+        Docker
+      </a></span> <span class="next"><a href="/doc-vuepress/JavaEE/ElasticSearch 高级.html">
+        ElasticSearch 高级
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/doc-vuepress/assets/js/app.4b1e1c20.js" defer></script><script src="/doc-vuepress/assets/js/2.3b3db5cf.js" defer></script><script src="/doc-vuepress/assets/js/25.38397550.js" defer></script>
+  </body>
+</html>
