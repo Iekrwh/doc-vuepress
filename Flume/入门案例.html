@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>入门案例 | Chiriri</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    <link rel="icon" href="/doc-vuepress/favicon.ico">
+    <meta name="description" content="Chiriridesu">
+    
+    <link rel="preload" href="/doc-vuepress/assets/css/0.styles.9c707f61.css" as="style"><link rel="preload" href="/doc-vuepress/assets/js/app.6e948bf5.js" as="script"><link rel="preload" href="/doc-vuepress/assets/js/2.3b3db5cf.js" as="script"><link rel="preload" href="/doc-vuepress/assets/js/11.f9256ed0.js" as="script"><link rel="prefetch" href="/doc-vuepress/assets/js/10.a0377846.js"><link rel="prefetch" href="/doc-vuepress/assets/js/100.a0779326.js"><link rel="prefetch" href="/doc-vuepress/assets/js/101.eb774c37.js"><link rel="prefetch" href="/doc-vuepress/assets/js/102.d7bd7eb1.js"><link rel="prefetch" href="/doc-vuepress/assets/js/103.d061cdd0.js"><link rel="prefetch" href="/doc-vuepress/assets/js/104.3bc419ac.js"><link rel="prefetch" href="/doc-vuepress/assets/js/105.dde26da3.js"><link rel="prefetch" href="/doc-vuepress/assets/js/106.ef4eedc8.js"><link rel="prefetch" href="/doc-vuepress/assets/js/107.bcc1af18.js"><link rel="prefetch" href="/doc-vuepress/assets/js/108.ac6be724.js"><link rel="prefetch" href="/doc-vuepress/assets/js/109.fbe31814.js"><link rel="prefetch" href="/doc-vuepress/assets/js/110.5418bbbf.js"><link rel="prefetch" href="/doc-vuepress/assets/js/111.fd04926f.js"><link rel="prefetch" href="/doc-vuepress/assets/js/112.2104312f.js"><link rel="prefetch" href="/doc-vuepress/assets/js/113.84ede38b.js"><link rel="prefetch" href="/doc-vuepress/assets/js/114.2d652725.js"><link rel="prefetch" href="/doc-vuepress/assets/js/115.74a6e0aa.js"><link rel="prefetch" href="/doc-vuepress/assets/js/116.40bf1f99.js"><link rel="prefetch" href="/doc-vuepress/assets/js/117.6ec4b8ef.js"><link rel="prefetch" href="/doc-vuepress/assets/js/118.d6600176.js"><link rel="prefetch" href="/doc-vuepress/assets/js/119.d59cf4df.js"><link rel="prefetch" href="/doc-vuepress/assets/js/12.4182f543.js"><link rel="prefetch" href="/doc-vuepress/assets/js/120.8c31015e.js"><link rel="prefetch" href="/doc-vuepress/assets/js/121.820fb991.js"><link rel="prefetch" href="/doc-vuepress/assets/js/122.765af864.js"><link rel="prefetch" href="/doc-vuepress/assets/js/123.c220ed38.js"><link rel="prefetch" href="/doc-vuepress/assets/js/124.4ed6cafc.js"><link rel="prefetch" href="/doc-vuepress/assets/js/125.4c0752f3.js"><link rel="prefetch" href="/doc-vuepress/assets/js/126.5541b6e6.js"><link rel="prefetch" href="/doc-vuepress/assets/js/127.ac37fc6e.js"><link rel="prefetch" href="/doc-vuepress/assets/js/128.90ea7c55.js"><link rel="prefetch" href="/doc-vuepress/assets/js/129.92042799.js"><link rel="prefetch" href="/doc-vuepress/assets/js/13.7248eb0d.js"><link rel="prefetch" href="/doc-vuepress/assets/js/130.5bbb5bf5.js"><link rel="prefetch" href="/doc-vuepress/assets/js/131.0dfe2e0a.js"><link rel="prefetch" href="/doc-vuepress/assets/js/132.5a631a5b.js"><link rel="prefetch" href="/doc-vuepress/assets/js/133.b6972dfe.js"><link rel="prefetch" href="/doc-vuepress/assets/js/134.6740582f.js"><link rel="prefetch" href="/doc-vuepress/assets/js/135.cdb7d299.js"><link rel="prefetch" href="/doc-vuepress/assets/js/136.67e6bd25.js"><link rel="prefetch" href="/doc-vuepress/assets/js/137.bf16b6ef.js"><link rel="prefetch" href="/doc-vuepress/assets/js/138.dabd03db.js"><link rel="prefetch" href="/doc-vuepress/assets/js/139.dd546778.js"><link rel="prefetch" href="/doc-vuepress/assets/js/14.d2ffde00.js"><link rel="prefetch" href="/doc-vuepress/assets/js/140.fb49cae4.js"><link rel="prefetch" href="/doc-vuepress/assets/js/141.23968392.js"><link rel="prefetch" href="/doc-vuepress/assets/js/142.ae095648.js"><link rel="prefetch" href="/doc-vuepress/assets/js/143.3b3707ab.js"><link rel="prefetch" href="/doc-vuepress/assets/js/144.76b024af.js"><link rel="prefetch" href="/doc-vuepress/assets/js/145.744feddc.js"><link rel="prefetch" href="/doc-vuepress/assets/js/146.a06b3feb.js"><link rel="prefetch" href="/doc-vuepress/assets/js/147.e827397d.js"><link rel="prefetch" href="/doc-vuepress/assets/js/148.5b7163be.js"><link rel="prefetch" href="/doc-vuepress/assets/js/149.f8d4b175.js"><link rel="prefetch" href="/doc-vuepress/assets/js/15.3179e424.js"><link rel="prefetch" href="/doc-vuepress/assets/js/150.83125449.js"><link rel="prefetch" href="/doc-vuepress/assets/js/151.afa0e4c0.js"><link rel="prefetch" href="/doc-vuepress/assets/js/152.ed0d5316.js"><link rel="prefetch" href="/doc-vuepress/assets/js/153.08deba9f.js"><link rel="prefetch" href="/doc-vuepress/assets/js/154.bf61d539.js"><link rel="prefetch" href="/doc-vuepress/assets/js/155.c9432381.js"><link rel="prefetch" href="/doc-vuepress/assets/js/156.1bced7d5.js"><link rel="prefetch" href="/doc-vuepress/assets/js/157.e1eb8099.js"><link rel="prefetch" href="/doc-vuepress/assets/js/158.ece8770b.js"><link rel="prefetch" href="/doc-vuepress/assets/js/159.bfb0b09e.js"><link rel="prefetch" href="/doc-vuepress/assets/js/16.d3c81d2a.js"><link rel="prefetch" href="/doc-vuepress/assets/js/160.31b5823c.js"><link rel="prefetch" href="/doc-vuepress/assets/js/161.6bd8c06b.js"><link rel="prefetch" href="/doc-vuepress/assets/js/162.5875fd2b.js"><link rel="prefetch" href="/doc-vuepress/assets/js/163.8f9f07f3.js"><link rel="prefetch" href="/doc-vuepress/assets/js/164.f68ea643.js"><link rel="prefetch" href="/doc-vuepress/assets/js/165.263bb658.js"><link rel="prefetch" href="/doc-vuepress/assets/js/166.7ae1724b.js"><link rel="prefetch" href="/doc-vuepress/assets/js/167.1d9b566a.js"><link rel="prefetch" href="/doc-vuepress/assets/js/168.02e8eb30.js"><link rel="prefetch" href="/doc-vuepress/assets/js/169.9800df33.js"><link rel="prefetch" href="/doc-vuepress/assets/js/17.ce11ea0b.js"><link rel="prefetch" href="/doc-vuepress/assets/js/170.18c5c187.js"><link rel="prefetch" href="/doc-vuepress/assets/js/171.497a9d00.js"><link rel="prefetch" href="/doc-vuepress/assets/js/172.e0b62c24.js"><link rel="prefetch" href="/doc-vuepress/assets/js/173.3f46f4f1.js"><link rel="prefetch" href="/doc-vuepress/assets/js/174.0c3dc1fa.js"><link rel="prefetch" href="/doc-vuepress/assets/js/175.5335bf12.js"><link rel="prefetch" href="/doc-vuepress/assets/js/176.ad10a358.js"><link rel="prefetch" href="/doc-vuepress/assets/js/177.074caac5.js"><link rel="prefetch" href="/doc-vuepress/assets/js/178.676419a7.js"><link rel="prefetch" href="/doc-vuepress/assets/js/179.1631656f.js"><link rel="prefetch" href="/doc-vuepress/assets/js/18.a1ea0276.js"><link rel="prefetch" href="/doc-vuepress/assets/js/180.3ab6fd7f.js"><link rel="prefetch" href="/doc-vuepress/assets/js/181.03085825.js"><link rel="prefetch" href="/doc-vuepress/assets/js/182.07d27991.js"><link rel="prefetch" href="/doc-vuepress/assets/js/183.413be218.js"><link rel="prefetch" href="/doc-vuepress/assets/js/184.0d03f7fd.js"><link rel="prefetch" href="/doc-vuepress/assets/js/185.1d56c6ad.js"><link rel="prefetch" href="/doc-vuepress/assets/js/186.774634e7.js"><link rel="prefetch" href="/doc-vuepress/assets/js/187.8c4709fc.js"><link rel="prefetch" href="/doc-vuepress/assets/js/188.2472798e.js"><link rel="prefetch" href="/doc-vuepress/assets/js/189.67621040.js"><link rel="prefetch" href="/doc-vuepress/assets/js/19.1407f350.js"><link rel="prefetch" href="/doc-vuepress/assets/js/190.26efcaaa.js"><link rel="prefetch" href="/doc-vuepress/assets/js/191.6234d356.js"><link rel="prefetch" href="/doc-vuepress/assets/js/192.afca641d.js"><link rel="prefetch" href="/doc-vuepress/assets/js/193.66c1626a.js"><link rel="prefetch" href="/doc-vuepress/assets/js/194.f2fbc834.js"><link rel="prefetch" href="/doc-vuepress/assets/js/195.3cc9cf86.js"><link rel="prefetch" href="/doc-vuepress/assets/js/196.a41363eb.js"><link rel="prefetch" href="/doc-vuepress/assets/js/197.243678d1.js"><link rel="prefetch" href="/doc-vuepress/assets/js/198.5e828a37.js"><link rel="prefetch" href="/doc-vuepress/assets/js/199.c6282f33.js"><link rel="prefetch" href="/doc-vuepress/assets/js/20.f16a556e.js"><link rel="prefetch" href="/doc-vuepress/assets/js/200.1d810f8b.js"><link rel="prefetch" href="/doc-vuepress/assets/js/201.4b1671a1.js"><link rel="prefetch" href="/doc-vuepress/assets/js/202.dc49793d.js"><link rel="prefetch" href="/doc-vuepress/assets/js/203.0df4681f.js"><link rel="prefetch" href="/doc-vuepress/assets/js/204.1f278001.js"><link rel="prefetch" href="/doc-vuepress/assets/js/205.30a3c1b7.js"><link rel="prefetch" href="/doc-vuepress/assets/js/206.2196ceaf.js"><link rel="prefetch" href="/doc-vuepress/assets/js/207.0221d2ae.js"><link rel="prefetch" href="/doc-vuepress/assets/js/208.71e3cab1.js"><link rel="prefetch" href="/doc-vuepress/assets/js/209.e88e294f.js"><link rel="prefetch" href="/doc-vuepress/assets/js/21.b76088d5.js"><link rel="prefetch" href="/doc-vuepress/assets/js/210.70e835e1.js"><link rel="prefetch" href="/doc-vuepress/assets/js/211.35276f35.js"><link rel="prefetch" href="/doc-vuepress/assets/js/212.7ea11726.js"><link rel="prefetch" href="/doc-vuepress/assets/js/213.e59846df.js"><link rel="prefetch" href="/doc-vuepress/assets/js/214.5f9fac30.js"><link rel="prefetch" href="/doc-vuepress/assets/js/22.c30ea85f.js"><link rel="prefetch" href="/doc-vuepress/assets/js/23.217f002f.js"><link rel="prefetch" href="/doc-vuepress/assets/js/24.32c4623a.js"><link rel="prefetch" href="/doc-vuepress/assets/js/25.607d985e.js"><link rel="prefetch" href="/doc-vuepress/assets/js/26.a7788a6d.js"><link rel="prefetch" href="/doc-vuepress/assets/js/27.64f722ed.js"><link rel="prefetch" href="/doc-vuepress/assets/js/28.631dfe5c.js"><link rel="prefetch" href="/doc-vuepress/assets/js/29.f8fad52b.js"><link rel="prefetch" href="/doc-vuepress/assets/js/3.3d766b15.js"><link rel="prefetch" href="/doc-vuepress/assets/js/30.0ba09a2f.js"><link rel="prefetch" href="/doc-vuepress/assets/js/31.33cb35ef.js"><link rel="prefetch" href="/doc-vuepress/assets/js/32.e02426b6.js"><link rel="prefetch" href="/doc-vuepress/assets/js/33.122885a7.js"><link rel="prefetch" href="/doc-vuepress/assets/js/34.935637ff.js"><link rel="prefetch" href="/doc-vuepress/assets/js/35.9ec2f5cd.js"><link rel="prefetch" href="/doc-vuepress/assets/js/36.97c03412.js"><link rel="prefetch" href="/doc-vuepress/assets/js/37.6fd9f758.js"><link rel="prefetch" href="/doc-vuepress/assets/js/38.95142af3.js"><link rel="prefetch" href="/doc-vuepress/assets/js/39.229e6b73.js"><link rel="prefetch" href="/doc-vuepress/assets/js/4.8856a9a1.js"><link rel="prefetch" href="/doc-vuepress/assets/js/40.5e0286b8.js"><link rel="prefetch" href="/doc-vuepress/assets/js/41.3592bc20.js"><link rel="prefetch" href="/doc-vuepress/assets/js/42.b5e2e56d.js"><link rel="prefetch" href="/doc-vuepress/assets/js/43.3676ecec.js"><link rel="prefetch" href="/doc-vuepress/assets/js/44.3a32f038.js"><link rel="prefetch" href="/doc-vuepress/assets/js/45.745ee8e2.js"><link rel="prefetch" href="/doc-vuepress/assets/js/46.c1221650.js"><link rel="prefetch" href="/doc-vuepress/assets/js/47.f19c47ca.js"><link rel="prefetch" href="/doc-vuepress/assets/js/48.55a25c39.js"><link rel="prefetch" href="/doc-vuepress/assets/js/49.9c7dc3f4.js"><link rel="prefetch" href="/doc-vuepress/assets/js/5.90f9cbf1.js"><link rel="prefetch" href="/doc-vuepress/assets/js/50.b46ee925.js"><link rel="prefetch" href="/doc-vuepress/assets/js/51.d329d797.js"><link rel="prefetch" href="/doc-vuepress/assets/js/52.fd8f397c.js"><link rel="prefetch" href="/doc-vuepress/assets/js/53.23909cc9.js"><link rel="prefetch" href="/doc-vuepress/assets/js/54.d13a40f3.js"><link rel="prefetch" href="/doc-vuepress/assets/js/55.a5b55a8f.js"><link rel="prefetch" href="/doc-vuepress/assets/js/56.cb7e2702.js"><link rel="prefetch" href="/doc-vuepress/assets/js/57.70542f2c.js"><link rel="prefetch" href="/doc-vuepress/assets/js/58.ea52eb82.js"><link rel="prefetch" href="/doc-vuepress/assets/js/59.4656872e.js"><link rel="prefetch" href="/doc-vuepress/assets/js/6.7862f44a.js"><link rel="prefetch" href="/doc-vuepress/assets/js/60.095d1e6e.js"><link rel="prefetch" href="/doc-vuepress/assets/js/61.9e8395aa.js"><link rel="prefetch" href="/doc-vuepress/assets/js/62.255b2396.js"><link rel="prefetch" href="/doc-vuepress/assets/js/63.e10e86e4.js"><link rel="prefetch" href="/doc-vuepress/assets/js/64.971d4a9e.js"><link rel="prefetch" href="/doc-vuepress/assets/js/65.422511e1.js"><link rel="prefetch" href="/doc-vuepress/assets/js/66.f493e49e.js"><link rel="prefetch" href="/doc-vuepress/assets/js/67.89f6a115.js"><link rel="prefetch" href="/doc-vuepress/assets/js/68.0a8a0065.js"><link rel="prefetch" href="/doc-vuepress/assets/js/69.a7ffb61f.js"><link rel="prefetch" href="/doc-vuepress/assets/js/7.ffa606ad.js"><link rel="prefetch" href="/doc-vuepress/assets/js/70.8606440c.js"><link rel="prefetch" href="/doc-vuepress/assets/js/71.849597b1.js"><link rel="prefetch" href="/doc-vuepress/assets/js/72.a36d6c56.js"><link rel="prefetch" href="/doc-vuepress/assets/js/73.9271bec4.js"><link rel="prefetch" href="/doc-vuepress/assets/js/74.c2c39654.js"><link rel="prefetch" href="/doc-vuepress/assets/js/75.27b46772.js"><link rel="prefetch" href="/doc-vuepress/assets/js/76.40d6b949.js"><link rel="prefetch" href="/doc-vuepress/assets/js/77.d54f69af.js"><link rel="prefetch" href="/doc-vuepress/assets/js/78.6526565f.js"><link rel="prefetch" href="/doc-vuepress/assets/js/79.3979b3e2.js"><link rel="prefetch" href="/doc-vuepress/assets/js/8.befc28ff.js"><link rel="prefetch" href="/doc-vuepress/assets/js/80.36cf2d03.js"><link rel="prefetch" href="/doc-vuepress/assets/js/81.4eff2717.js"><link rel="prefetch" href="/doc-vuepress/assets/js/82.77e68a3e.js"><link rel="prefetch" href="/doc-vuepress/assets/js/83.bb62fb0d.js"><link rel="prefetch" href="/doc-vuepress/assets/js/84.f20ba61e.js"><link rel="prefetch" href="/doc-vuepress/assets/js/85.66f486a1.js"><link rel="prefetch" href="/doc-vuepress/assets/js/86.4f56de68.js"><link rel="prefetch" href="/doc-vuepress/assets/js/87.b36ac2f1.js"><link rel="prefetch" href="/doc-vuepress/assets/js/88.254d1d79.js"><link rel="prefetch" href="/doc-vuepress/assets/js/89.b889a7fb.js"><link rel="prefetch" href="/doc-vuepress/assets/js/9.65373538.js"><link rel="prefetch" href="/doc-vuepress/assets/js/90.a6ef119f.js"><link rel="prefetch" href="/doc-vuepress/assets/js/91.f5f8b5c1.js"><link rel="prefetch" href="/doc-vuepress/assets/js/92.aaea9d6c.js"><link rel="prefetch" href="/doc-vuepress/assets/js/93.2a30db4b.js"><link rel="prefetch" href="/doc-vuepress/assets/js/94.e66444ea.js"><link rel="prefetch" href="/doc-vuepress/assets/js/95.fc61c42d.js"><link rel="prefetch" href="/doc-vuepress/assets/js/96.329fbad9.js"><link rel="prefetch" href="/doc-vuepress/assets/js/97.c3dbfbdf.js"><link rel="prefetch" href="/doc-vuepress/assets/js/98.2d2f8ecf.js"><link rel="prefetch" href="/doc-vuepress/assets/js/99.ce3018d2.js">
+    <link rel="stylesheet" href="/doc-vuepress/assets/css/0.styles.9c707f61.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/doc-vuepress/" class="home-link router-link-active"><!----> <span class="site-name">Chiriri</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/doc-vuepress/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="后端" class="dropdown-title"><span class="title">后端</span> <span class="arrow down"></span></button> <button type="button" aria-label="后端" class="mobile-dropdown-title"><span class="title">后端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/doc-vuepress/JavaSE/" class="nav-link">
+  JavaSE
+</a></li><li class="dropdown-item"><!----> <a href="/doc-vuepress/JavaEE/" class="nav-link">
+  JavaEE
+</a></li><li class="dropdown-item"><!----> <a href="/doc-vuepress/Linux/" class="nav-link">
+  Linux
+</a></li><li class="dropdown-item"><!----> <a href="/doc-vuepress/SQL/" class="nav-link">
+  SQL
+</a></li><li class="dropdown-item"><!----> <a href="/doc-vuepress/机器学习/" class="nav-link">
+  机器学习
+</a></li><li class="dropdown-item"><!----> <a href="/doc-vuepress/Python模块/" class="nav-link">
+  Python模块
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="大数据" class="dropdown-title"><span class="title">大数据</span> <span class="arrow down"></span></button> <button type="button" aria-label="大数据" class="mobile-dropdown-title"><span class="title">大数据</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/doc-vuepress/Hadoop/" class="nav-link">
+  Hadoop
+</a></li><li class="dropdown-item"><!----> <a href="/doc-vuepress/Zookeeper/" class="nav-link">
+  Zookeeper
+</a></li><li class="dropdown-item"><!----> <a href="/doc-vuepress/Hive/" class="nav-link">
+  Hive
+</a></li><li class="dropdown-item"><!----> <a href="/doc-vuepress/Flume/" class="nav-link router-link-active">
+  Flume
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><span class="title">前端</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端" class="mobile-dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/doc-vuepress/前端/" class="nav-link">
+  前端
+</a></li><li class="dropdown-item"><!----> <a href="/doc-vuepress/Vue/" class="nav-link">
+  Vue
+</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/doc-vuepress/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="后端" class="dropdown-title"><span class="title">后端</span> <span class="arrow down"></span></button> <button type="button" aria-label="后端" class="mobile-dropdown-title"><span class="title">后端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/doc-vuepress/JavaSE/" class="nav-link">
+  JavaSE
+</a></li><li class="dropdown-item"><!----> <a href="/doc-vuepress/JavaEE/" class="nav-link">
+  JavaEE
+</a></li><li class="dropdown-item"><!----> <a href="/doc-vuepress/Linux/" class="nav-link">
+  Linux
+</a></li><li class="dropdown-item"><!----> <a href="/doc-vuepress/SQL/" class="nav-link">
+  SQL
+</a></li><li class="dropdown-item"><!----> <a href="/doc-vuepress/机器学习/" class="nav-link">
+  机器学习
+</a></li><li class="dropdown-item"><!----> <a href="/doc-vuepress/Python模块/" class="nav-link">
+  Python模块
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="大数据" class="dropdown-title"><span class="title">大数据</span> <span class="arrow down"></span></button> <button type="button" aria-label="大数据" class="mobile-dropdown-title"><span class="title">大数据</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/doc-vuepress/Hadoop/" class="nav-link">
+  Hadoop
+</a></li><li class="dropdown-item"><!----> <a href="/doc-vuepress/Zookeeper/" class="nav-link">
+  Zookeeper
+</a></li><li class="dropdown-item"><!----> <a href="/doc-vuepress/Hive/" class="nav-link">
+  Hive
+</a></li><li class="dropdown-item"><!----> <a href="/doc-vuepress/Flume/" class="nav-link router-link-active">
+  Flume
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><span class="title">前端</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端" class="mobile-dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/doc-vuepress/前端/" class="nav-link">
+  前端
+</a></li><li class="dropdown-item"><!----> <a href="/doc-vuepress/Vue/" class="nav-link">
+  Vue
+</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/doc-vuepress/Flume/Flime基础架构.html" class="sidebar-link">Flime基础架构</a></li><li><a href="/doc-vuepress/Flume/Flume安装.html" class="sidebar-link">Flume安装</a></li><li><a href="/doc-vuepress/Flume/入门案例.html" class="active sidebar-link">入门案例</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/doc-vuepress/Flume/入门案例.html#netcat的发送和监听" class="sidebar-link">netcat的发送和监听</a></li><li class="sidebar-sub-header"><a href="/doc-vuepress/Flume/入门案例.html#监控端口数据在控制台输出-官方案例-netcat" class="sidebar-link">监控端口数据在控制台输出 官方案例 netcat</a></li><li class="sidebar-sub-header"><a href="/doc-vuepress/Flume/入门案例.html#配置log4j-properties" class="sidebar-link">配置log4j.properties</a></li><li class="sidebar-sub-header"><a href="/doc-vuepress/Flume/入门案例.html#实时监控单个追加文件到hdfs案例-exec" class="sidebar-link">实时监控单个追加文件到HDFS案例 exec</a></li><li class="sidebar-sub-header"><a href="/doc-vuepress/Flume/入门案例.html#实时监控目录下多个新文件到hdfs-spooldir" class="sidebar-link">实时监控目录下多个新文件到HDFS spooldir</a></li><li class="sidebar-sub-header"><a href="/doc-vuepress/Flume/入门案例.html#实时监控目录下的多个追加文件-taildir" class="sidebar-link">实时监控目录下的多个追加文件 taildir</a></li></ul></li><li><a href="/doc-vuepress/Flume/Flume 进阶.html" class="sidebar-link">Flume 进阶</a></li><li><a href="/doc-vuepress/Flume/自定义组件.html" class="sidebar-link">自定义组件</a></li><li><a href="/doc-vuepress/Flume/面试题.html" class="sidebar-link">面试题</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="入门案例"><a href="#入门案例" class="header-anchor">#</a> 入门案例</h1> <h2 id="netcat的发送和监听"><a href="#netcat的发送和监听" class="header-anchor">#</a> netcat的发送和监听</h2> <p>安装</p> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token function">sudo</span> yum <span class="token function">install</span> -y <span class="token function">nc</span> <span class="token comment">#安装netcat工具</span>
+<span class="token function">sudo</span> <span class="token function">netstat</span> -tunlp <span class="token operator">|</span> <span class="token function">grep</span> <span class="token number">44444</span> <span class="token comment">#判断44444端口是否被占用</span>
+</code></pre></div><p>使用nc发送和接受消息 此操作在一个机器上 2个ssh窗口中操作</p> <p>接受</p> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token function">nc</span> -l <span class="token number">44444</span>  <span class="token comment"># 监听44444端口</span>
+</code></pre></div><p>发送</p> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token function">nc</span> hadoop102 <span class="token number">44444</span> <span class="token comment">#发送</span>
+输入内容
+</code></pre></div><p>也可以在其他机器向指定ip 端口 发送消息</p> <p>监听和发送的端口必须一致</p> <p>默认为tcp协议</p> <h2 id="监控端口数据在控制台输出-官方案例-netcat"><a href="#监控端口数据在控制台输出-官方案例-netcat" class="header-anchor">#</a> 监控端口数据在控制台输出 官方案例 netcat</h2> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token comment">#r1:表示a1的Source的名称 多个名称之前空格隔开</span>
+a1.sources <span class="token operator">=</span> r1  
+<span class="token comment">#k1:表示a1的Sink名称</span>
+a1.sinks <span class="token operator">=</span> k1
+<span class="token comment">#c1:表示channels的名称</span>
+a1.channels <span class="token operator">=</span> c1 
+
+<span class="token comment"># a1的输入源类型为netcat端口类型</span>
+a1.sources.r1.type <span class="token operator">=</span> netcat 
+<span class="token comment"># a1的监听地址</span>
+a1.sources.r1.bind <span class="token operator">=</span> localhost 
+<span class="token comment"># a1的监听端口</span>
+a1.sources.r1.port <span class="token operator">=</span> <span class="token number">44444</span> 
+
+<span class="token comment"># a1的输出目的地是控制台logger类型</span>
+a1.sinks.k1.type <span class="token operator">=</span> logger  
+
+<span class="token comment"># a1的channel类型是memory内存型</span>
+a1.channels.c1.type <span class="token operator">=</span> memory 
+<span class="token comment"># a1的channel总容量1000个event 默认为100</span>
+a1.channels.c1.capacity <span class="token operator">=</span> <span class="token number">1000</span> 
+<span class="token comment"># a1的channel传输时收集到了100条event以后再去提交事务</span>
+a1.channels.c1.transactionCapacity <span class="token operator">=</span> <span class="token number">100</span> 
+
+
+<span class="token comment">#声明source sink 和 channel 之间的关系</span>
+<span class="token comment">#将r1和c1连接起来</span>
+a1.sources.r1.channels <span class="token operator">=</span> c1 
+<span class="token comment">#将k1和c1连接起来 注意一个sink只能对应一个channel</span>
+a1.sinks.k1.channel <span class="token operator">=</span> c1 
+</code></pre></div><p><img src="https://gitee.com/Iekrwh/md-images/raw/master/images/image-20211110210311722.png" alt="image-20211110210311722"></p> <p>在/opt/module/flume下启动</p> <div class="language-sh extra-class"><pre class="language-sh"><code>flume-ng agent --conf conf/ --name a1 --conf-file datas/netcatsource_loggersink.conf -Dflume.root.logger<span class="token operator">=</span>INFO,console
+<span class="token comment">#或</span>
+flume-ng agent -c conf/ -n a1 -f job/flume-netcat-logger.conf -Dflume.root.logger<span class="token operator">=</span>INFO,console
+</code></pre></div><ul><li>--conf/-c：表示配置文件存储在conf/目录</li> <li>--name/-n：表示给agent起名为a1</li> <li>--conf-file/-f：flume本次启动读取的配置文件是在job文件夹下的flume-telnet.conf文件。</li> <li>-Dflume.root.logger=INFO,console ：-D表示flume运行时动态修改flume.root.logger参数属性值，并将控制台日志打印级别设置为INFO级别。日志级别包括:log、info、warn、error。</li></ul> <p>在另外一个ssh窗口中使用netcat发送消息</p> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token function">nc</span> localhost <span class="token number">44444</span> <span class="token comment">#地址为配置文件中配置的地址</span>
+<span class="token comment">#输入文字</span>
+</code></pre></div><h2 id="配置log4j-properties"><a href="#配置log4j-properties" class="header-anchor">#</a> 配置log4j.properties</h2> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token function">vim</span> /opt/module/flume/conf/log4j.properties 
+
+<span class="token comment">#flume.root.logger=DEBUG,console</span>
+flume.root.logger<span class="token operator">=</span>INFO,LOGFILE <span class="token comment">#日志级别 和 输出位置</span>
+flume.log.dir<span class="token operator">=</span>./logs <span class="token comment">#log文件存放路径</span>
+flume.log.file<span class="token operator">=</span>flume.log  <span class="token comment">#log文件名</span>
+</code></pre></div><h2 id="实时监控单个追加文件到hdfs案例-exec"><a href="#实时监控单个追加文件到hdfs案例-exec" class="header-anchor">#</a> 实时监控单个追加文件到HDFS案例 exec</h2> <p><img src="https://gitee.com/Iekrwh/md-images/raw/master/images/image-20211111104221130.png" alt="image-20211111104221130"></p> <p>创建案例配置文件</p> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token builtin class-name">cd</span> /opt/module/flume/datas
+<span class="token function">touch</span> <span class="token number">123</span>.log
+<span class="token function">vim</span> execsource_hdfssink.conf
+</code></pre></div><div class="language-sh extra-class"><pre class="language-sh"><code>a2.sources <span class="token operator">=</span> r2
+a2.sinks <span class="token operator">=</span> k2
+a2.channels <span class="token operator">=</span> c2
+
+<span class="token comment"># 监听文件类型</span>
+a2.sources.r2.type <span class="token operator">=</span> <span class="token builtin class-name">exec</span>
+<span class="token comment"># 监听命令</span>
+a2.sources.r2.command <span class="token operator">=</span> <span class="token function">tail</span> -F /opt/module/flume/datas/123.log
+
+<span class="token comment">#HDFS Sink</span>
+a2.sinks.k2.type <span class="token operator">=</span> hdfs
+<span class="token comment">#如果要使用时间转义序列 则需要开启本地时间戳 或者 在event中headers中带时间戳</span>
+a2.sinks.k2.hdfs.path <span class="token operator">=</span> hdfs://hadoop102:8020/flume/%Y%m%d/%H
+<span class="token comment">#上传文件的前缀</span>
+a2.sinks.k2.hdfs.filePrefix <span class="token operator">=</span> logs-
+
+<span class="token comment">#下面3个配置定义了多久时间单位创建一个新的文件夹</span>
+<span class="token comment">#是否按照时间滚动文件夹</span>
+a2.sinks.k2.hdfs.round <span class="token operator">=</span> <span class="token boolean">true</span>
+<span class="token comment">#多少时间单位创建一个新的文件夹</span>
+a2.sinks.k2.hdfs.roundValue <span class="token operator">=</span> <span class="token number">1</span>
+<span class="token comment">#重新定义时间单位</span>
+a2.sinks.k2.hdfs.roundUnit <span class="token operator">=</span> hour
+
+
+<span class="token comment">#是否使用本地时间戳</span>
+a2.sinks.k2.hdfs.useLocalTimeStamp <span class="token operator">=</span> <span class="token boolean">true</span>
+
+
+<span class="token comment">#积攒多少个Event才flush到HDFS一次</span>
+a2.sinks.k2.hdfs.batchSize <span class="token operator">=</span> <span class="token number">100</span>
+<span class="token comment">#设置文件类型，可支持压缩</span>
+a2.sinks.k2.hdfs.fileType <span class="token operator">=</span> DataStream
+<span class="token comment">#多久生成一个新的文件 秒为单位</span>
+a2.sinks.k2.hdfs.rollInterval <span class="token operator">=</span> <span class="token number">60</span>
+<span class="token comment">#设置每个文件的滚动大小 字节单位</span>
+a2.sinks.k2.hdfs.rollSize <span class="token operator">=</span> <span class="token number">134217700</span>
+<span class="token comment">#文件的滚动与Event数量无关 0为禁用 也可以设置为指定数 当Event到达一定数量则文件滚动</span>
+a2.sinks.k2.hdfs.rollCount <span class="token operator">=</span> <span class="token number">0</span>
+
+<span class="token comment"># Use a channel which buffers events in memory</span>
+a2.channels.c2.type <span class="token operator">=</span> memory
+a2.channels.c2.capacity <span class="token operator">=</span> <span class="token number">1000</span>
+a2.channels.c2.transactionCapacity <span class="token operator">=</span> <span class="token number">100</span>
+
+
+a2.sources.r2.channels <span class="token operator">=</span> c2
+a2.sinks.k2.channel <span class="token operator">=</span> c2
+</code></pre></div><p>启动</p> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token builtin class-name">cd</span> <span class="token punctuation">..</span>
+flume-ng agent -n a2 -c conf/ -f datas/execsource_hdfssink.conf -Dflume.root.logger<span class="token operator">=</span>INFO,console
+<span class="token builtin class-name">echo</span> <span class="token number">123</span> <span class="token operator">&gt;&gt;</span> /opt/module/flume/datas/123.log <span class="token comment">#写入内容测试 hdfs上是否创建文件</span>
+
+<span class="token builtin class-name">echo</span> ccc <span class="token operator">&gt;&gt;</span> /opt/module/flume/datas/123.log <span class="token comment">#等待60s 追内容 是否滚动文件生成新的采集文件</span>
+</code></pre></div><p><img src="https://gitee.com/Iekrwh/md-images/raw/master/images/image-20211111112640291.png" alt="image-20211111112640291"></p> <p>当前正在写入的文件为tmp 只有滚动文件后次缓存文件会修改为普通文件</p> <h2 id="实时监控目录下多个新文件到hdfs-spooldir"><a href="#实时监控目录下多个新文件到hdfs-spooldir" class="header-anchor">#</a> 实时监控目录下多个新文件到HDFS spooldir</h2> <p><img src="https://gitee.com/Iekrwh/md-images/raw/master/images/image-20211111114002805.png" alt="image-20211111114002805"></p> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token builtin class-name">cd</span> /opt/module/flume/
+<span class="token function">mkdir</span> upload
+<span class="token function">vim</span> datas/flume-dir-hdfs.conf
+</code></pre></div><p>配置文件</p> <div class="language-sh extra-class"><pre class="language-sh"><code>a3.sources <span class="token operator">=</span> r3
+a3.sinks <span class="token operator">=</span> k3
+a3.channels <span class="token operator">=</span> c3
+
+<span class="token comment"># Describe/configure the source</span>
+<span class="token comment"># 监听一个指定的文件夹 自动收集目录中的内容</span>
+a3.sources.r3.type <span class="token operator">=</span> spooldir
+<span class="token comment">#目录 目录下的文件名不能相同 否则抛异常</span>
+a3.sources.r3.spoolDir <span class="token operator">=</span> /opt/module/flume/upload
+<span class="token comment">#如果目录下的文件名读取完后 文件名相同 可以采取读取完后删除文件  默认为加后缀名</span>
+<span class="token comment">#设置为 immediate 读取完后删除 默认值为 never 保留</span>
+<span class="token comment">#a3.sources.r3.deletePolicy = immediate</span>
+<span class="token comment">#被读取完毕后的文件 后缀名被更改为    默认值为.COMPLETED</span>
+a3.sources.r3.fileSuffix <span class="token operator">=</span> .COMPLETED
+
+a3.sources.r3.fileHeader <span class="token operator">=</span> <span class="token boolean">true</span>
+<span class="token comment">#忽略所有以.tmp结尾的文件，不上传</span>
+a3.sources.r3.ignorePattern <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">[</span>^ <span class="token punctuation">]</span>*<span class="token punctuation">\</span>.tmp<span class="token punctuation">)</span>
+
+<span class="token comment"># Describe the sink</span>
+a3.sinks.k3.type <span class="token operator">=</span> hdfs
+a3.sinks.k3.hdfs.path <span class="token operator">=</span> hdfs://hadoop102:8020/flume2/upload/%Y%m%d/%H
+<span class="token comment">#上传文件的前缀</span>
+a3.sinks.k3.hdfs.filePrefix <span class="token operator">=</span> upload-
+<span class="token comment">#是否按照时间滚动文件夹</span>
+a3.sinks.k3.hdfs.round <span class="token operator">=</span> <span class="token boolean">true</span>
+<span class="token comment">#多少时间单位创建一个新的文件夹</span>
+a3.sinks.k3.hdfs.roundValue <span class="token operator">=</span> <span class="token number">1</span>
+<span class="token comment">#重新定义时间单位</span>
+a3.sinks.k3.hdfs.roundUnit <span class="token operator">=</span> hour
+<span class="token comment">#是否使用本地时间戳</span>
+a3.sinks.k3.hdfs.useLocalTimeStamp <span class="token operator">=</span> <span class="token boolean">true</span>
+<span class="token comment">#积攒多少个Event才flush到HDFS一次</span>
+a3.sinks.k3.hdfs.batchSize <span class="token operator">=</span> <span class="token number">100</span>
+<span class="token comment">#设置文件类型，可支持压缩</span>
+a3.sinks.k3.hdfs.fileType <span class="token operator">=</span> DataStream
+<span class="token comment">#多久生成一个新的文件</span>
+a3.sinks.k3.hdfs.rollInterval <span class="token operator">=</span> <span class="token number">60</span>
+<span class="token comment">#设置每个文件的滚动大小大概是128M</span>
+a3.sinks.k3.hdfs.rollSize <span class="token operator">=</span> <span class="token number">134217700</span>
+<span class="token comment">#文件的滚动与Event数量无关</span>
+a3.sinks.k3.hdfs.rollCount <span class="token operator">=</span> <span class="token number">0</span>
+
+<span class="token comment"># Use a channel which buffers events in memory</span>
+a3.channels.c3.type <span class="token operator">=</span> memory
+a3.channels.c3.capacity <span class="token operator">=</span> <span class="token number">1000</span>
+a3.channels.c3.transactionCapacity <span class="token operator">=</span> <span class="token number">100</span>
+
+<span class="token comment"># Bind the source and sink to the channel</span>
+a3.sources.r3.channels <span class="token operator">=</span> c3
+a3.sinks.k3.channel <span class="token operator">=</span> c3
+</code></pre></div><p>启动</p> <div class="language-sh extra-class"><pre class="language-sh"><code>flume-ng agent -n a3 -c conf/ -f datas/flume-dir-hdfs.conf -Dflume.root.logger<span class="token operator">=</span>INFO,console
+</code></pre></div><p>创建文本文件写入内容 移动到upload目录下</p> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token builtin class-name">cd</span> /opt/module/flume/
+<span class="token function">touch</span> <span class="token number">123</span>.log
+<span class="token builtin class-name">echo</span> eee <span class="token operator">&gt;&gt;</span> <span class="token number">123</span>.log 
+<span class="token function">cp</span> <span class="token number">123</span>.log upload/
+</code></pre></div><h2 id="实时监控目录下的多个追加文件-taildir"><a href="#实时监控目录下的多个追加文件-taildir" class="header-anchor">#</a> 实时监控目录下的多个追加文件 taildir</h2> <p><img src="https://gitee.com/Iekrwh/md-images/raw/master/images/image-20211111171529662.png" alt="image-20211111171529662"></p> <p>我们使用exec 读取单个文件追加内容时 如果flume挂掉后重新启动 会把文件从头到尾重新读取一遍 这是我们不希望的 而taildir读取多个文件追加内容时 <strong>会在positionFile 指定的json文件下</strong> <strong>保留读取过的文件位置</strong> 当flume挂掉重新上线后 读取json文件记录的位置 继续监控读取内容</p> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token builtin class-name">cd</span> /opt/module/flume/
+<span class="token function">mkdir</span> files
+<span class="token function">vim</span> datas/flume-taildir-hdfs.conf
+</code></pre></div><p>配置文件</p> <div class="language-sh extra-class"><pre class="language-sh"><code>a3.sources <span class="token operator">=</span> r3
+a3.sinks <span class="token operator">=</span> k3
+a3.channels <span class="token operator">=</span> c3
+
+<span class="token comment"># Describe/configure the source</span>
+<span class="token comment">#sources类型</span>
+a3.sources.r3.type <span class="token operator">=</span> TAILDIR
+<span class="token comment">#taildir保存读取文件内容的位置 如果发生宕机会从该文件中读取上次读取到位置  默认为~/.flume/taildir_position.json</span>
+a3.sources.r3.positionFile <span class="token operator">=</span> /opt/module/flume/tail_dir.json
+<span class="token comment">#定义组 不同组 指向不同文件 多个组之间空格隔开</span>
+a3.sources.r3.filegroups <span class="token operator">=</span> f1 f2
+<span class="token comment">#f1组 监控指定目录下名字包含file的文件 正则表达式</span>
+a3.sources.r3.filegroups.f1 <span class="token operator">=</span> /opt/module/flume/files/.*file.*
+<span class="token comment">#f2组 监控指定目录下名字包含的log的文件</span>
+a3.sources.r3.filegroups.f2 <span class="token operator">=</span> /opt/module/flume/files/.*log.*
+
+<span class="token comment"># Describe the sink</span>
+a3.sinks.k3.type <span class="token operator">=</span> hdfs
+a3.sinks.k3.hdfs.path <span class="token operator">=</span> hdfs://hadoop102:8020/flume/upload2/%Y%m%d/%H
+<span class="token comment">#上传文件的前缀</span>
+a3.sinks.k3.hdfs.filePrefix <span class="token operator">=</span> upload-
+<span class="token comment">#是否按照时间滚动文件夹</span>
+a3.sinks.k3.hdfs.round <span class="token operator">=</span> <span class="token boolean">true</span>
+<span class="token comment">#多少时间单位创建一个新的文件夹</span>
+a3.sinks.k3.hdfs.roundValue <span class="token operator">=</span> <span class="token number">1</span>
+<span class="token comment">#重新定义时间单位</span>
+a3.sinks.k3.hdfs.roundUnit <span class="token operator">=</span> hour
+<span class="token comment">#是否使用本地时间戳</span>
+a3.sinks.k3.hdfs.useLocalTimeStamp <span class="token operator">=</span> <span class="token boolean">true</span>
+<span class="token comment">#积攒多少个Event才flush到HDFS一次</span>
+a3.sinks.k3.hdfs.batchSize <span class="token operator">=</span> <span class="token number">100</span>
+<span class="token comment">#设置文件类型，可支持压缩</span>
+a3.sinks.k3.hdfs.fileType <span class="token operator">=</span> DataStream
+<span class="token comment">#多久生成一个新的文件</span>
+a3.sinks.k3.hdfs.rollInterval <span class="token operator">=</span> <span class="token number">60</span>
+<span class="token comment">#设置每个文件的滚动大小大概是128M</span>
+a3.sinks.k3.hdfs.rollSize <span class="token operator">=</span> <span class="token number">134217700</span>
+<span class="token comment">#文件的滚动与Event数量无关</span>
+a3.sinks.k3.hdfs.rollCount <span class="token operator">=</span> <span class="token number">0</span>
+
+<span class="token comment"># Use a channel which buffers events in memory</span>
+a3.channels.c3.type <span class="token operator">=</span> memory
+a3.channels.c3.capacity <span class="token operator">=</span> <span class="token number">1000</span>
+a3.channels.c3.transactionCapacity <span class="token operator">=</span> <span class="token number">100</span>
+
+<span class="token comment"># Bind the source and sink to the channel</span>
+a3.sources.r3.channels <span class="token operator">=</span> c3
+a3.sinks.k3.channel <span class="token operator">=</span> c3
+</code></pre></div><p>启动</p> <div class="language-sh extra-class"><pre class="language-sh"><code>flume-ng agent -n a3 -c conf/ -f datas/flume-taildir-hdfs.conf -Dflume.root.logger<span class="token operator">=</span>INFO,console
+</code></pre></div><p>测试</p> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token builtin class-name">cd</span> files
+<span class="token builtin class-name">echo</span> hello <span class="token operator">&gt;&gt;</span> file1.txt
+<span class="token builtin class-name">echo</span> atguigu <span class="token operator">&gt;&gt;</span> log.txt
+
+<span class="token comment">#关闭flume 重新启动 查看是否还读取 aaa 和 bbb 字段</span>
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/doc-vuepress/Flume/Flume安装.html" class="prev">
+        Flume安装
+      </a></span> <span class="next"><a href="/doc-vuepress/Flume/Flume 进阶.html">
+        Flume 进阶
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/doc-vuepress/assets/js/app.6e948bf5.js" defer></script><script src="/doc-vuepress/assets/js/2.3b3db5cf.js" defer></script><script src="/doc-vuepress/assets/js/11.f9256ed0.js" defer></script>
+  </body>
+</html>
